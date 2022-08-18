@@ -3,6 +3,7 @@
 
 
 <!-- Mirrored from www.elathemes.com/themes/mobel/contact.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 31 Jul 2022 11:36:53 GMT -->
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -15,10 +16,10 @@
     <!-- Meta tags -->
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" href="favicon.ico">
+    <link rel="icon" href="assets/images/favicon.png">
 
     <!--Title-->
-    <title>Contact us | Mobel - Furniture Website Template</title>
+    <title>Contact us | Arrow Furniture</title>
 
     <!--CSS bundle -->
     <link rel="stylesheet" media="all" href="css/bundle.min.css" />
@@ -36,36 +37,115 @@
 </head>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <title>Bootstrap Example</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .topnav {
+        overflow: hidden;
+        background-color: #333;
+    }
+
+    .container .navbar-header {
+        float: left !important;
+        position: absolute !important;
+    }
+
+    .topnav a {
+        float: right;
+        display: block;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+    }
+
+    .topnav a:hover {
+        background-color: #ddd;
+        color: black;
+    }
+
+    .topnav a.active {
+        background-color: white;
+        color: black;
+    }
+
+    .topnav .icon {
+        display: none;
+    }
+
+    @media screen and (max-width: 600px) {
+        .topnav a {
+            display: none;
+        }
+
+        .topnav a.icon {
+            float: right;
+            display: block;
+        }
+
+        .container .navbar-header {
+            position: static !important;
+        }
+
+        .navbar-header a {
+            color: black !important;
+        }
+    }
+
+    @media screen and (max-width: 600px) {
+        .topnav.responsive {
+            display: block;
+        }
+
+        .topnav.responsive .icon {
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+
+        .topnav.responsive a {
+            padding-top: 10px;
+            float: none;
+            display: block;
+            text-align: left;
+        }
+    }
+</style>
+
 <body>
 
-<nav style="height:100px;" class="navbar-default">
-  <div class="container">
-    <div style="margin-top: 30px;" class="navbar-header">
-      <a class="navbar-brand" href="#">Arrow Furniture</a>
+    <div class="container">
+        <div class="navbar-header" style="margin:5px;">
+            <img src="assets/images/arrowlogo.jpeg" alt="logo" style="width:50px;height:50px;">
+            <a style="color:white;" class="navbar-brand" href="#">Arrow Furniture</a>
+        </div>
     </div>
-    <ul  style="margin-top: 30px;float: right;" class="nav navbar-nav">
-      <li ><a href="index.html">Home</a></li>
-      <li><a href="about.html">About us</a></li>
-      <li><a href="products-grid.html">Product</a></li>
-      <li class="active" ><a href="contact.html">Contact us</a></li>
-    </ul>
-  </div>
-</nav>
-  <!-- <div style="display: none;" class="container">
-  <h3>Basic Navbar Example</h3>
-  <p>A navigation bar is a navigation header that is placed at the top of the page.</p>
-</div> -->
-
+    <div class="topnav" id="myTopnav">
+        <a href="#">Contact Us</a>
+        <a href="#">About</a>
+        <a href="products-grid.html">Product</a>
+        <a href="index.html">Home</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </div>
 </body>
+
 </html>
+
 <body>
 
     <div class="page-loader"></div>
@@ -147,43 +227,54 @@
                                     <div class="col-md-offset-1 col-md-10 text-center">
                                         <h2 class="title">Send an email</h2>
                                         <p>
-                                            Thanks for your interest in Mobel Theme. We believe in creativity as one of the major forces of progress.
-                                            Please use this form if you have any questions about our products and we'll get back with you very soon.
+                                            Thanks for your interest in Mobel Theme. We believe in creativity as one of
+                                            the major forces of progress.
+                                            Please use this form if you have any questions about our products and we'll
+                                            get back with you very soon.
                                         </p>
 
                                         <div class="contact-form-wrapper">
 
-                                            <a class="btn btn-clean open-form" data-text-open="Contact us via form" data-text-close="Close form">Contact us via form</a>
+                                            <a class="btn btn-clean open-form" data-text-open="Contact us via form"
+                                                data-text-close="Close form">Contact us via form</a>
 
                                             <div class="contact-form clearfix">
-                                                <form id="sendmail" name="sendmail" action="http://www.elathemes.com/themes/mobel/sendmail.php" method="post">
+                                                <form id="sendmail" name="sendmail"
+                                                    action="http://www.elathemes.com/themes/mobel/sendmail.php"
+                                                    method="post">
                                                     <div class="row">
                                                         <div class="col-md-6">
                                                             <div class="form-group">
-                                                                <input id="Name" name="Name" type="text" value="" class="form-control" placeholder="Your name" >
+                                                                <input id="Name" name="Name" type="text" value=""
+                                                                    class="form-control" placeholder="Your name">
                                                             </div>
                                                         </div>
 
                                                         <div class="col-md-6">
                                                             <div class="form-group">
-                                                                <input id="Email" name="Email" type="email" value="" class="form-control" placeholder="Your email" >
+                                                                <input id="Email" name="Email" type="email" value=""
+                                                                    class="form-control" placeholder="Your email">
                                                             </div>
                                                         </div>
 
                                                         <div class="col-md-12">
                                                             <div class="form-group">
-                                                                <input id="Subject" name="Subject" type="text" value="" class="form-control" placeholder="Subject" >
+                                                                <input id="Subject" name="Subject" type="text" value=""
+                                                                    class="form-control" placeholder="Subject">
                                                             </div>
                                                         </div>
 
                                                         <div class="col-md-12">
                                                             <div class="form-group">
-                                                                <textarea id="Comment" name="Comment" class="form-control" placeholder="Your message" rows="10"></textarea>
+                                                                <textarea id="Comment" name="Comment"
+                                                                    class="form-control" placeholder="Your message"
+                                                                    rows="10"></textarea>
                                                             </div>
                                                         </div>
 
                                                         <div class="col-md-12 text-center">
-                                                            <input type="submit" class="btn btn-clean" value="Send message" />
+                                                            <input type="submit" class="btn btn-clean"
+                                                                value="Send message" />
                                                         </div>
                                                     </div>
                                                 </form>
@@ -267,29 +358,32 @@
                         </div>
 
 
-                    </div><!--col-sm-8-->
-                </div> <!--/row-->
-            </div><!--/container-->
+                    </div>
+                    <!--col-sm-8-->
+                </div>
+                <!--/row-->
+            </div>
+            <!--/container-->
         </section>
 
         <div class="inc:_footer.html"></div>
         <nav style="height:100px;" class="navbar-default">
             <div class="container">
-              <div style="margin-top: 30px;" class="navbar-header">
-                <a class="navbar-brand" href="#"></a>
-              </div>
-              <ul  style="margin-top: 30px;float: right;" class="nav navbar-nav">
-                <li><a href="#"> All Copy right reserved@2022</a></li>
-                <li><a href="#"> </a></li>
-                <li><a href="#"> </a></li>
-                <li><a href="#"> </a></li>
-                <li><a href="#"> </a></li>
-                <li><a href="#"> </a></li>
-                <li><a href="#"></a></li>
-                <li><a href="#"></a></li>
-              </ul>
+                <div style="margin-top: 30px;" class="navbar-header">
+                    <a class="navbar-brand" href="#"></a>
+                </div>
+                <ul style="margin-top: 30px;float: right;" class="nav navbar-nav">
+                    <li><a href="#"> All Copy right reserved@2022</a></li>
+                    <li><a href="#"> </a></li>
+                    <li><a href="#"> </a></li>
+                    <li><a href="#"> </a></li>
+                    <li><a href="#"> </a></li>
+                    <li><a href="#"> </a></li>
+                    <li><a href="#"></a></li>
+                    <li><a href="#"></a></li>
+                </ul>
             </div>
-          </nav>
+        </nav>
     </div>
     <!--/wrapper-->
 
@@ -300,13 +394,13 @@
     <script>
         function initMap() {
             var contentString =
-            '<div class="map-info-window">' +
-            '<p><img src="assets/images/logo-dark.png" alt=""></p>' +
-            '<p><strong>Mobel - Furniture factory</strong></p>' +
-            '<p><i class="fa fa-map-marker"></i> 200 12th Ave, New York, NY 10001, USA</p>' +
-            '<p><i class="fa fa-phone"></i> +12 33 444 555</p>' +
-            '<p><i class="fa fa-clock-o"></i> 10am - 6pm</p>' +
-            '</div>';
+                '<div class="map-info-window">' +
+                '<p><img src="assets/images/logo-dark.png" alt=""></p>' +
+                '<p><strong>Mobel - Furniture factory</strong></p>' +
+                '<p><i class="fa fa-map-marker"></i> 200 12th Ave, New York, NY 10001, USA</p>' +
+                '<p><i class="fa fa-phone"></i> +12 33 444 555</p>' +
+                '<p><i class="fa fa-clock-o"></i> 10am - 6pm</p>' +
+                '</div>';
 
             var infowindow = new google.maps.InfoWindow({
                 content: contentString
@@ -331,9 +425,21 @@
             });
         }
     </script>
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAabaAL675kRhFvfrPEmjFUirXHk2cA9Dc&amp;callback=initMap"></script>
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAabaAL675kRhFvfrPEmjFUirXHk2cA9Dc&amp;callback=initMap"></script>
+    <script>
+        function myFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
+    </script>
 </body>
 
 
 <!-- Mirrored from www.elathemes.com/themes/mobel/contact.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 31 Jul 2022 11:36:54 GMT -->
+
 </html>

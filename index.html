@@ -13,10 +13,11 @@
     <!-- Meta tags -->
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" href="favicon.ico">
+    <link rel="icon" href="assets/images/favicon.png">
 
     <!--Title-->
-    <title>Mobel - Furniture Website Template</title>
+    <title>Arrow Furniture</title>
+
 
     <!--CSS bundle -->
     <link rel="stylesheet" media="all" href="css/bundle.min.css" />
@@ -43,29 +44,103 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .topnav {
+        overflow: hidden;
+        background-color: #333;
+    }
+
+    .container .navbar-header {
+        float: left !important;
+        position: absolute !important;
+    }
+
+    .topnav a {
+        float: right;
+        display: block;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+    }
+
+    .topnav a:hover {
+        background-color: #ddd;
+        color: black;
+    }
+
+    .topnav a.active {
+        background-color: white;
+        color: black;
+    }
+
+    .topnav .icon {
+        display: none;
+    }
+
+    @media screen and (max-width: 600px) {
+        .topnav a {
+            display: none;
+        }
+
+        .topnav a.icon {
+            float: right;
+            display: block;
+        }
+
+        .container .navbar-header {
+
+            position: static !important;
+        }
+
+        .navbar-header a {
+            color: black !important;
+        }
+    }
+
+    @media screen and (max-width: 600px) {
+        .topnav.responsive {
+            display: block;
+        }
+
+        .topnav.responsive .icon {
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+
+        .topnav.responsive a {
+            padding-top: 10px;
+            float: none;
+            display: block;
+            text-align: left;
+        }
+    }
+</style>
 
 <body>
 
-    <nav class="navbar-default">
-        <div class="container">
-            <div class=" navbar-header">
-                <img src="assets/images/arrowlogo.jpeg" alt="logo" style="width:50px;height:50px;">
-                <a class="navbar-brand" href="#">Arrow Furniture</a>
-            </div>
-            <ul class="nav navbar-nav">
-                <li class="active"><a href="index.html">Home</a></li>
-                <!-- <li><a href="about.html">About us</a></li> -->
-                <li><a href="products-grid.html">Product</a></li>
-                <li><a href="#">About us</a></li>
-                <li><a href="#">Contact us</a></li>
-                <!-- <li><a href="contact.html">Contact us</a></li> -->
-            </ul>
+    <div class="container">
+        <div class="navbar-header" style="margin:5px;">
+            <img src="assets/images/arrowlogo.jpeg" alt="logo" style="width:50px;height:50px;">
+            <a style="color: white;" class="navbar-brand" href="#">Arrow Furniture</a>
         </div>
-    </nav>
-    <!-- <div style="display: none;" class="container">
-  <h3>Basic Navbar Example</h3>
-  <p>A navigation bar is a navigation header that is placed at the top of the page.</p>
-</div> -->
+    </div>
+    <div class="topnav" id="myTopnav">
+        <a href="contact.html">Contact Us</a>
+        <a href="#">About</a>
+        <a href="products-grid.html">Product</a>
+        <a class="active" href="index.html">Home</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </div>
 
 </body>
 
@@ -90,10 +165,9 @@
                 <div class="item" style="background-image:url(assets/images/gallery-1.jpg)">
                     <div class="box">
                         <div class="container">
-                            <h2 class="title animated h1" data-animation="fadeInDown">Modern furniture theme</h2>
+                            <h2 class="title animated h1" data-animation="fadeInDown">Modern furniture </h2>
                             <div class="animated" data-animation="fadeInUp">
-                                Modern & powerfull template. <br /> Clean design & reponsive
-                                layout. Google fonts integration
+                                Modern & Quality Furntiures Available. <br />
                             </div>
                             <!-- <div class="animated" data-animation="fadeInUp">
                                 <a href="https://themeforest.net/item/mobel-furniture-website-template/20382155" target="_blank" class="btn btn-main" ><i class="icon icon-cart"></i> Buy this template</a>
@@ -107,13 +181,13 @@
                 <div class="item" style="background-image:url(assets/images/gallery-2.jpg)">
                     <div class="box">
                         <div class="container">
-                            <h2 class="title animated h1" data-animation="fadeInDown">Mobile ready!</h2>
+                            <h2 class="title animated h1" data-animation="fadeInDown">Get Ready For Purchase!</h2>
                             <div class="animated" data-animation="fadeInUp">Unlimited Choices. Unbeatable Prices. Free
                                 Shipping.</div>
-                            <div class="animated" data-animation="fadeInUp">Furniture category icon fonts!</div>
+                            <!-- <div class="animated" data-animation="fadeInUp">Furniture category icon fonts!</div>
                             <div class="animated" data-animation="fadeInUp">
                                 <a href="category.html" class="btn btn-clean">Get insipred</a>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                 </div>
@@ -124,18 +198,19 @@
                     <div class="box">
                         <div class="container">
                             <h2 class="title animated h1" data-animation="fadeInDown">
-                                Very Animate.css Friend.
+                                Well Designed Products.
                             </h2>
                             <div class="desc animated" data-animation="fadeInUp">
-                                Combine with animate.css. Or just use your own!.
+                                All type of furnitures available at low price. <br>
+                                Get your furniture now.
                             </div>
-                            <div class="desc animated" data-animation="fadeInUp">
+                            <!-- <div class="desc animated" data-animation="fadeInUp">
                                 Bunch of typography effects.
                             </div>
                             <div class="animated" data-animation="fadeInUp">
                                 <a href="https://themeforest.net/item/mobel-furniture-website-template/20382155"
                                     target="_blank" class="btn btn-clean">Buy this template</a>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                 </div>
@@ -366,10 +441,10 @@
                                     <a href="javascript:void(0);" data-title="Add to favorites"
                                         data-title-added="Added to favorites list"><i class="icon icon-heart"></i></a>
                                 </span>
-                                <span>
+                                <!-- <span>
                                     <a href="#productid1" class="mfp-open" data-title="Quick wiew"><i
                                             class="icon icon-eye"></i></a>
-                                </span>
+                                </span> -->
                             </div>
                             <div class="btn btn-add">
                                 <i class="icon icon-cart"></i>
@@ -377,9 +452,9 @@
                             <div class="figure-grid">
                                 <span class="label label-info">-50%</span>
                                 <div class="image">
-                                    <a href="#productid1" class="mfp-open">
-                                        <img src="assets/images/product-1.jpg" alt="" width="360" />
-                                    </a>
+                                    <!-- <a href="#productid1" class="mfp-open"> -->
+                                    <img src="assets/images/product-1.jpg" alt="" width="360" />
+                                    <!-- </a> -->
                                 </div>
                                 <div class="text">
                                     <h2 class="title h4"><a href="product.html">Green corner</a></h2>
@@ -402,19 +477,19 @@
                                     <a href="javascript:void(0);" data-title="Add to favorites"
                                         data-title-added="Added to favorites list"><i class="icon icon-heart"></i></a>
                                 </span>
-                                <span>
+                                <!-- <span>
                                     <a href="#productid1" class="mfp-open" data-title="Quick wiew"><i
                                             class="icon icon-eye"></i></a>
-                                </span>
+                                </span> -->
                             </div>
                             <div class="btn btn-add">
                                 <i class="icon icon-cart"></i>
                             </div>
                             <div class="figure-grid">
                                 <div class="image">
-                                    <a href="#productid1" class="mfp-open">
-                                        <img src="assets/images/product-2.jpg" alt="" width="360" />
-                                    </a>
+                                    <!-- <a href="#productid1" class="mfp-open"> -->
+                                    <img src="assets/images/product-2.jpg" alt="" width="360" />
+                                    <!-- </a> -->
                                 </div>
                                 <div class="text">
                                     <h2 class="title h4"><a href="product.html">Laura</a></h2>
@@ -444,10 +519,10 @@
                                     <a href="javascript:void(0);" data-title="Add to favorites"
                                         data-title-added="Added to favorites list"><i class="icon icon-heart"></i></a>
                                 </span>
-                                <span>
+                                <!-- <span>
                                     <a href="#productid1" class="mfp-open" data-title="Quick wiew"><i
                                             class="icon icon-eye"></i></a>
-                                </span>
+                                </span> -->
                             </div>
                             <div class="btn btn-add">
                                 <i class="icon icon-cart"></i>
@@ -455,9 +530,9 @@
                             <div class="figure-grid">
                                 <span class="label label-warning">New</span>
                                 <div class="image">
-                                    <a href="#productid1" class="mfp-open">
-                                        <img src="assets/images/product-4.jpg" alt="" width="360" />
-                                    </a>
+                                    <!-- <a href="#productid1" class="mfp-open"> -->
+                                    <img src="assets/images/product-4.jpg" alt="" width="360" />
+                                    <!-- </a> -->
                                 </div>
                                 <div class="text">
                                     <h2 class="title h4"><a href="product.html">Aurora</a></h2>
@@ -479,10 +554,10 @@
                                     <a href="javascript:void(0);" data-title="Add to favorites"
                                         data-title-added="Added to favorites list"><i class="icon icon-heart"></i></a>
                                 </span>
-                                <span>
+                                <!-- <span>
                                     <a href="#productid1" class="mfp-open" data-title="Quick wiew"><i
                                             class="icon icon-eye"></i></a>
-                                </span>
+                                </span> -->
                             </div>
                             <div class="btn btn-add">
                                 <i class="icon icon-cart"></i>
@@ -490,9 +565,9 @@
                             <div class="figure-grid">
                                 <span class="label label-warning">New</span>
                                 <div class="image">
-                                    <a href="#productid1" class="mfp-open">
-                                        <img src="assets/images/product-6.jpg" alt="" width="360" />
-                                    </a>
+                                    <!-- <a href="#productid1" class="mfp-open"> -->
+                                    <img src="assets/images/product-6.jpg" alt="" width="360" />
+                                    <!-- </a> -->
                                 </div>
                                 <div class="text">
                                     <h2 class="title h4"><a href="product.html">Dining set</a></h2>
@@ -515,19 +590,19 @@
                                     <a href="javascript:void(0);" data-title="Add to favorites"
                                         data-title-added="Added to favorites list"><i class="icon icon-heart"></i></a>
                                 </span>
-                                <span>
+                                <!-- <span>
                                     <a href="#productid1" class="mfp-open" data-title="Quick wiew"><i
                                             class="icon icon-eye"></i></a>
-                                </span>
+                                </span> -->
                             </div>
                             <div class="btn btn-add">
                                 <i class="icon icon-cart"></i>
                             </div>
                             <div class="figure-grid">
                                 <div class="image">
-                                    <a href="#productid1" class="mfp-open">
-                                        <img src="assets/images/product-6.jpg" alt="" width="360" />
-                                    </a>
+                                    <!-- <a href="#productid1" class="mfp-open"> -->
+                                    <img src="assets/images/product-6.jpg" alt="" width="360" />
+                                    <!-- </a> -->
                                 </div>
                                 <div class="text">
                                     <h2 class="title h4"><a href="product.html">Seat chair</a></h2>
@@ -550,10 +625,10 @@
                                     <a href="javascript:void(0);" data-title="Add to favorites"
                                         data-title-added="Added to favorites list"><i class="icon icon-heart"></i></a>
                                 </span>
-                                <span>
+                                <!-- <span>
                                     <a href="#productid1" class="mfp-open" data-title="Quick wiew"><i
                                             class="icon icon-eye"></i></a>
-                                </span>
+                                </span> -->
                             </div>
                             <div class="btn btn-add">
                                 <i class="icon icon-cart"></i>
@@ -561,9 +636,9 @@
                             <div class="figure-grid">
                                 <span class="label label-info">-50%</span>
                                 <div class="image">
-                                    <a href="#productid1" class="mfp-open">
-                                        <img src="assets/images/product-1.jpg" alt="" width="360" />
-                                    </a>
+                                    <!-- <a href="#productid1" class="mfp-open"> -->
+                                    <img src="assets/images/product-1.jpg" alt="" width="360" />
+                                    <!-- </a> -->
                                 </div>
                                 <div class="text">
                                     <h2 class="title h4"><a href="product.html">Green corner</a></h2>
@@ -586,19 +661,19 @@
                                     <a href="javascript:void(0);" data-title="Add to favorites"
                                         data-title-added="Added to favorites list"><i class="icon icon-heart"></i></a>
                                 </span>
-                                <span>
+                                <!-- <span>
                                     <a href="#productid1" class="mfp-open" data-title="Quick wiew"><i
                                             class="icon icon-eye"></i></a>
-                                </span>
+                                </span> -->
                             </div>
                             <div class="btn btn-add">
                                 <i class="icon icon-cart"></i>
                             </div>
                             <div class="figure-grid">
                                 <div class="image">
-                                    <a href="#productid1" class="mfp-open">
-                                        <img src="assets/images/product-2.jpg" alt="" width="360" />
-                                    </a>
+                                    <!-- <a href="#productid1" class="mfp-open"> -->
+                                    <img src="assets/images/product-2.jpg" alt="" width="360" />
+                                    <!-- </a> -->
                                 </div>
                                 <div class="text">
                                     <h2 class="title h4"><a href="product.html">Laura</a></h2>
@@ -621,19 +696,19 @@
                                     <a href="javascript:void(0);" data-title="Add to favorites"
                                         data-title-added="Added to favorites list"><i class="icon icon-heart"></i></a>
                                 </span>
-                                <span>
+                                <!-- <span>
                                     <a href="#productid1" class="mfp-open" data-title="Quick wiew"><i
                                             class="icon icon-eye"></i></a>
-                                </span>
+                                </span> -->
                             </div>
                             <div class="btn btn-add">
                                 <i class="icon icon-cart"></i>
                             </div>
                             <div class="figure-grid">
                                 <div class="image">
-                                    <a href="#productid1" class="mfp-open">
-                                        <img src="assets/images/product-1.png" alt="" width="360" />
-                                    </a>
+                                    <!-- <a href="#productid1" class="mfp-open"> -->
+                                    <img src="assets/images/product-1.png" alt="" width="360" />
+                                    <!-- </a> -->
                                 </div>
                                 <div class="text">
                                     <h2 class="title h4"><a href="product.html">Nude</a></h2>
@@ -655,10 +730,10 @@
                                     <a href="javascript:void(0);" data-title="Add to favorites"
                                         data-title-added="Added to favorites list"><i class="icon icon-heart"></i></a>
                                 </span>
-                                <span>
+                                <!-- <span>
                                     <a href="#productid1" class="mfp-open" data-title="Quick wiew"><i
                                             class="icon icon-eye"></i></a>
-                                </span>
+                                </span> -->
                             </div>
                             <div class="btn btn-add">
                                 <i class="icon icon-cart"></i>
@@ -666,9 +741,9 @@
                             <div class="figure-grid">
                                 <span class="label label-warning">New</span>
                                 <div class="image">
-                                    <a href="#productid1" class="mfp-open">
-                                        <img src="assets/images/product-4.jpg" alt="" width="360" />
-                                    </a>
+                                    <!-- <a href="#productid1" class="mfp-open"> -->
+                                    <!-- <img src="assets/images/product-4.jpg" alt="" width="360" />
+                                    </a> -->
                                 </div>
                                 <div class="text">
                                     <h2 class="title h4"><a href="product.html">Aurora</a></h2>
@@ -931,9 +1006,9 @@
 
                     <div class="col-sm-4">
                         <article>
-                            <a href="article.html">
+                            <a href="#">
                                 <div class="image">
-                                    <img src="assets/images/project-1.jpg" alt="" />
+                                    <img src="assets/images/project-4.jpg" alt="" />
                                 </div>
                                 <div class="entry entry-block">
                                     <div class="date">28 Mart 2017</div>
@@ -963,7 +1038,7 @@
                         <article>
                             <a href="article.html">
                                 <div class="image">
-                                    <img src="assets/images/project-2.jpg" alt="" />
+                                    <img src="assets/images/project-5.jpg" alt="" />
                                 </div>
                                 <div class="entry entry-block">
                                     <div class="date">25 Mart 2017</div>
@@ -991,9 +1066,9 @@
 
                     <div class="col-sm-4">
                         <article>
-                            <a href="article.html">
+                            <a href="#">
                                 <div class="image">
-                                    <img src="assets/images/project-3.jpg" alt="" />
+                                    <img src="assets/images/project-6.jpg" alt="" />
                                 </div>
                                 <div class="entry entry-block">
                                     <div class="date">28 Mart 2017</div>
@@ -1022,7 +1097,7 @@
                 <!-- === button more === -->
 
                 <div class="wrapper-more">
-                    <a href="ideas.html" class="btn btn-main">View all posts</a>
+                    <a href="#" class="btn btn-main">View all posts</a>
                 </div>
 
             </div>
@@ -1041,7 +1116,7 @@
                             throughout Italy to find exceptional
                             artisans and bring their unique handcrafted objects to connoisseurs everywhere.
                         </p>
-                        <p><a href="about.html" class="btn btn-clean">Read full story</a></p>
+                        <p><a href="#" class="btn btn-clean">Read full story</a></p>
                     </div>
                 </div>
             </div>
@@ -1072,7 +1147,7 @@
 
                     <div class="col-sm-4">
                         <article>
-                            <a href="article.html">
+                            <a href="#">
                                 <div class="image" style="background-image:url(assets/images/blog-1.jpg)">
                                     <img src="assets/images/blog-1.jpg" alt="" />
                                 </div>
@@ -1099,7 +1174,7 @@
 
                     <div class="col-sm-4">
                         <article>
-                            <a href="article.html">
+                            <a href="#">
                                 <div class="image" style="background-image:url(assets/images/blog-2.jpg)">
                                     <img src="assets/images/blog-1.jpg" alt="" />
                                 </div>
@@ -1126,7 +1201,7 @@
 
                     <div class="col-sm-4">
                         <article>
-                            <a href="article.html">
+                            <a href="#">
                                 <div class="image" style="background-image:url(assets/images/blog-8.jpg)">
                                     <img src="assets/images/blog-8.jpg" alt="" />
                                 </div>
@@ -1154,7 +1229,7 @@
                 <!-- === button more === -->
 
                 <div class="wrapper-more">
-                    <a href="blog-grid.html" class="btn btn-main">View all posts</a>
+                    <a href="#" class="btn btn-main">View all posts</a>
                 </div>
 
             </div>
@@ -1232,6 +1307,16 @@
             </ul>
         </div>
     </nav>
+    <script>
+        function myFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
+    </script>
 </body>
 
 </html>
