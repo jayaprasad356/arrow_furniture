@@ -70,6 +70,12 @@
         padding: 14px 16px;
         text-decoration: none;
         font-size: 17px;
+        height: 70px !important;
+    }
+
+    .container a {
+        margin: 12px;
+        font-weight: bold;
     }
 
     .topnav a:hover {
@@ -89,6 +95,7 @@
     @media screen and (max-width: 600px) {
         .topnav a {
             display: none;
+            height: 50px !important;
         }
 
         .topnav a.icon {
@@ -97,8 +104,12 @@
         }
 
         .container .navbar-header {
-
+            margin: 10px;
             position: static !important;
+        }
+
+        #navin {
+            background-color: rgb(162, 189, 162) !important;
         }
 
         .navbar-header a {
@@ -129,15 +140,15 @@
 <body>
 
 
-    <div class="container">
-        <div class="navbar-header" style="margin:5px;">
-            <img src="assets/images/arrowlogo.jpeg" alt="logo" style="width:50px;height:50px;">
+    <div class="container" id="navin">
+        <div class="navbar-header">
+            <img src="assets/images/arrowlogo.jpeg" alt="logo" style="width:70px;height:70px;border-radius: 5px;">
             <a style="color:white;" class="navbar-brand" href="#">Arrow Furniture</a>
         </div>
     </div>
     <div class="topnav" id="myTopnav">
-        <a href="#">Contact Us</a>
-        <a href="#">About</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="about.html">About</a>
         <a class="active" href="products-grid.html">Product</a>
         <a href="index.html">Home</a>
         <a href="javascript:void(0);" class="icon" onclick="myFunction()">
@@ -366,7 +377,7 @@
         <!-- ======================== Products ======================== -->
 
         <section class="products">
-            <div class="container">
+            <div class="container-fluid">
 
                 <header class="hidden">
                     <h3 class="h3 title">Product category grid</h3>
@@ -598,10 +609,10 @@
                                     <a href="javascript:void(0);" data-title="Add to favorites"
                                         data-title-added="Added to favorites list"><i class="icon icon-heart"></i></a>
                                 </span>
-                                <!-- <span>
+                                <span>
                                     <a href="#productid1" class="mfp-open" data-title="Quick wiew"><i
                                             class="icon icon-eye"></i></a>
-                                </span> -->
+                                </span>
                             </div>
                             <div class="btn btn-add">
                                 <i class="icon icon-cart"></i>
@@ -609,12 +620,12 @@
                             <div class="figure-grid">
                                 <span class="label label-warning">New</span>
                                 <div class="image">
-                                    <a href="#productid1" class="mfp-open">
+                                    <a class="mfp-open">
                                         <img src="assets/images/product-4.jpg" alt="" width="360" />
                                     </a>
                                 </div>
                                 <div class="text">
-                                    <h2 class="title h4"><a href="product.html">Aurora</a></h2>
+                                    <h2 class="title h4"><a>Aurora</a></h2>
                                     <sup>₹ 299,-</sup>
                                     <span class="description clearfix">Gubergren amet dolor ea diam takimata
                                         consetetur facilisis blandit et aliquyam lorem ea duo labore diam
@@ -636,10 +647,9 @@
                                     <a href="javascript:void(0);" data-title="Add to favorites"
                                         data-title-added="Added to favorites list"><i class="icon icon-heart"></i></a>
                                 </span>
-                                <!-- <span>
-                                    <a href="#productid1" class="mfp-open" data-title="Quick wiew"><i
-                                            class="icon icon-eye"></i></a>
-                                </span> -->
+                                <span>
+                                    <a class="mfp-open" data-title="Quick wiew"><i class="icon icon-eye"></i></a>
+                                </span>
                             </div>
                             <div class="btn btn-add">
                                 <i class="icon icon-cart"></i>
@@ -647,12 +657,12 @@
                             <div class="figure-grid">
                                 <span class="label label-info">-50%</span>
                                 <div class="image">
-                                    <!-- <a href="#productid1" class="mfp-open"> -->
-                                    <img src="assets/images/product-1.jpg" alt="" width="360" />
-                                    <!-- </a> -->
+                                    <a href="#productid2" class="mfp-open">
+                                        <img src="assets/images/product-1.jpg" alt="" width="360" />
+                                    </a>
                                 </div>
                                 <div class="text">
-                                    <h2 class="title h4"><a href="product.html">Green corner</a></h2>
+                                    <h2 class="title h4"><a>Green corner</a></h2>
                                     <sub>₹ 1499,-</sub>
                                     <sup>₹ 1099,-</sup>
                                     <span class="description clearfix">Gubergren amet dolor ea diam takimata
@@ -689,7 +699,7 @@
                                     <!-- </a> -->
                                 </div>
                                 <div class="text">
-                                    <h2 class="title h4"><a href="product.html">Laura</a></h2>
+                                    <h2 class="title h4"><a>Laura</a></h2>
                                     <sub>₹ 3999,-</sub>
                                     <sup>₹ 3499,-</sup>
                                     <span class="description clearfix">Gubergren amet dolor ea diam takimata
@@ -724,7 +734,7 @@
                                     <!-- </a> -->
                                 </div>
                                 <div class="text">
-                                    <h2 class="title h4"><a href="product.html">Nude</a></h2>
+                                    <h2 class="title h4"><a>Nude</a></h2>
                                     <sup>₹ 2999,-</sup>
                                     <sup>₹ 2549,-</sup>
                                     <span class="description clearfix">Gubergren amet dolor ea diam takimata
@@ -762,7 +772,7 @@
                                     <!-- </a> -->
                                 </div>
                                 <div class="text">
-                                    <h2 class="title h4"><a href="product.html">Aurora</a></h2>
+                                    <h2 class="title h4"><a>Aurora</a></h2>
                                     <sup>₹ 299,-</sup>
                                     <span class="description clearfix">Gubergren amet dolor ea diam takimata
                                         consetetur facilisis blandit et aliquyam lorem ea duo labore diam
@@ -798,7 +808,7 @@
                                     <!-- </a> -->
                                 </div>
                                 <div class="text">
-                                    <h2 class="title h4"><a href="product.html">Dining set</a></h2>
+                                    <h2 class="title h4"><a>Dining set</a></h2>
                                     <sub>₹ 1999,-</sub>
                                     <sup>₹ 1499,-</sup>
                                     <span class="description clearfix">Gubergren amet dolor ea diam takimata
@@ -834,7 +844,7 @@
                                     <!-- </a> -->
                                 </div>
                                 <div class="text">
-                                    <h2 class="title h4"><a href="product.html">Seat chair</a></h2>
+                                    <h2 class="title h4"><a>Seat chair</a></h2>
                                     <sup>₹ 896,-</sup>
                                     <span class="description clearfix">Gubergren amet dolor ea diam takimata
                                         consetetur facilisis blandit et aliquyam lorem ea duo labore diam
@@ -871,7 +881,7 @@
                                     <!-- </a> -->
                                 </div>
                                 <div class="text">
-                                    <h2 class="title h4"><a href="product.html">Green corner</a></h2>
+                                    <h2 class="title h4"><a>Green corner</a></h2>
                                     <sub>₹ 1499,-</sub>
                                     <sup>₹ 1099,-</sup>
                                     <span class="description clearfix">Gubergren amet dolor ea diam takimata
@@ -907,7 +917,7 @@
                                     <!-- </a> -->
                                 </div>
                                 <div class="text">
-                                    <h2 class="title h4"><a href="product.html">Laura</a></h2>
+                                    <h2 class="title h4"><a>Laura</a></h2>
                                     <sub>₹ 3999,-</sub>
                                     <sup>₹ 3499,-</sup>
                                     <span class="description clearfix">Gubergren amet dolor ea diam takimata
@@ -943,7 +953,7 @@
                                     <!-- </a> -->
                                 </div>
                                 <div class="text">
-                                    <h2 class="title h4"><a href="product.html">Nude</a></h2>
+                                    <h2 class="title h4"><a>Nude</a></h2>
                                     <sup>₹ 2999,-</sup>
                                     <span class="description clearfix">Gubergren amet dolor ea diam takimata
                                         consetetur facilisis blandit et aliquyam lorem ea duo labore diam
@@ -954,10 +964,9 @@
                         </article>
                     </div>
 
-                    <!-- === product-item === -->
-
                 </div>
                 <!--/row-->
+
                 <!--Pagination-->
                 <!-- <div class="pagination-wrapper">
                     <ul class="pagination">
@@ -979,113 +988,199 @@
                     </ul>
                 </div> -->
 
-            </div>
-            <!--/product items-->
+        </section>
+        <!-- ========================  Product info popup - quick view ======================== -->
 
-            <!--/row-->
-            <!-- ========================  Product info popup - quick view ======================== -->
+        <div class="popup-main mfp-hide" id="productid1">
 
-            <div class="popup-main mfp-hide" id="productid1">
+            <!-- === product popup === -->
 
-                <!-- === product popup === -->
+            <div class="product">
 
-                <div class="product">
+                <!-- === popup-title === -->
 
-                    <!-- === popup-title === -->
-
-                    <div class="popup-title">
-                        <div class="h1 title">Laura <small>product category</small></div>
-                    </div>
-
-                    <!-- === product gallery === -->
-
-                    <div class="owl-product-gallery">
-                        <img src="assets/images/product-1.png" alt="" width="640" />
-                        <img src="assets/images/product-2.png" alt="" width="640" />
-                        <img src="assets/images/product-3.png" alt="" width="640" />
-                        <img src="assets/images/product-4.png" alt="" width="640" />
-                    </div>
-
-                    <!-- === product-popup-info === -->
-
-                    <div class="popup-content">
-                        <div class="product-info-wrapper">
-                            <div class="row">
-
-                                <!-- === left-column === -->
-
-                                <div class="col-sm-6">
-                                    <div class="info-box">
-                                        <strong>Maifacturer</strong>
-                                        <span>Brand name</span>
-                                    </div>
-                                    <div class="info-box">
-                                        <strong>Materials</strong>
-                                        <span>Wood, Leather, Acrylic</span>
-                                    </div>
-                                    <div class="info-box">
-                                        <strong>Availability</strong>
-                                        <span><i class="fa fa-check-square-o"></i> in stock</span>
-                                    </div>
-                                </div>
-
-                                <!-- === right-column === -->
-
-                                <div class="col-sm-6">
-                                    <div class="info-box">
-                                        <strong>Available Colors</strong>
-                                        <div class="product-colors clearfix">
-                                            <span class="color-btn color-btn-red"></span>
-                                            <span class="color-btn color-btn-blue checked"></span>
-                                            <span class="color-btn color-btn-green"></span>
-                                            <span class="color-btn color-btn-gray"></span>
-                                            <span class="color-btn color-btn-biege"></span>
-                                        </div>
-                                    </div>
-                                    <div class="info-box">
-                                        <strong>Choose size</strong>
-                                        <div class="product-colors clearfix">
-                                            <span class="color-btn color-btn-biege">S</span>
-                                            <span class="color-btn color-btn-biege checked">M</span>
-                                            <span class="color-btn color-btn-biege">XL</span>
-                                            <span class="color-btn color-btn-biege">XXL</span>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
-                            <!--/row-->
-                        </div>
-                        <!--/product-info-wrapper-->
-                    </div>
-                    <!--/popup-content-->
-                    <!-- === product-popup-footer === -->
-
-                    <div class="popup-table">
-                        <div class="popup-cell">
-                            <div class="price">
-                                <span class="h3">₹ 1999,00 <small>₹ 2999,00</small></span>
-                            </div>
-                        </div>
-                        <div class="popup-cell">
-                            <div class="popup-buttons">
-                                <a href="product.html"><span class="icon icon-eye"></span> <span class="hidden-xs">View
-                                        more</span></a>
-                                <a href="javascript:void(0);"><span class="icon icon-cart"></span> <span
-                                        class="hidden-xs">Buy</span></a>
-                            </div>
-                        </div>
-                    </div>
-
+                <div class="popup-title">
+                    <div class="h1 title">Aurora <small>product category</small></div>
                 </div>
-                <!--/product-->
+
+                <!-- === product gallery === -->
+
+                <div class="owl-product-gallery">
+                    <img src="assets/images/product-4.jpg" alt="" width="640" />
+                </div>
+
+                <!-- === product-popup-info === -->
+
+                <div class="popup-content">
+                    <div class="product-info-wrapper">
+                        <div class="row">
+
+                            <!-- === left-column === -->
+
+                            <div class="col-sm-6">
+                                <div class="info-box">
+                                    <strong>Manufacturer</strong>
+                                    <span>Brand name</span>
+                                </div>
+                                <div class="info-box">
+                                    <strong>Materials</strong>
+                                    <span>Wood, Leather, Acrylic</span>
+                                </div>
+                                <div class="info-box">
+                                    <strong>Availability</strong>
+                                    <span><i class="fa fa-check-square-o"></i> in stock</span>
+                                </div>
+                            </div>
+
+                            <!-- === right-column === -->
+
+                            <div class="col-sm-6">
+                                <div class="info-box">
+                                    <strong>Available Colors</strong>
+                                    <div class="product-colors clearfix">
+                                        <span class="color-btn color-btn-red checked"></span>
+                                        <span class="color-btn color-btn-blue "></span>
+                                        <span class="color-btn color-btn-green"></span>
+                                        <span class="color-btn color-btn-gray"></span>
+                                        <span class="color-btn color-btn-biege"></span>
+                                    </div>
+                                </div>
+                                <div class="info-box">
+                                    <strong>Choose size</strong>
+                                    <div class="product-colors clearfix">
+                                        <span class="color-btn color-btn-biege">S</span>
+                                        <span class="color-btn color-btn-biege checked">M</span>
+                                        <span class="color-btn color-btn-biege">XL</span>
+                                        <span class="color-btn color-btn-biege">XXL</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <!--/row-->
+                    </div>
+                    <!--/product-info-wrapper-->
+                </div>
+                <!--/popup-content-->
+                <!-- === product-popup-footer === -->
+
+                <div class="popup-table">
+                    <div class="popup-cell">
+                        <div class="price">
+                            <span class="h3">₹ 1299,00 <small>₹ 1999,00</small></span>
+                        </div>
+                    </div>
+                    <div class="popup-cell">
+                        <div class="popup-buttons">
+                            <a><span class="icon icon-eye"></span> <span class="hidden-xs">View
+                                    more</span></a>
+                            <a href="javascript:void(0);"><span class="icon icon-cart"></span> <span
+                                    class="hidden-xs">Buy</span></a>
+                        </div>
+                    </div>
+                </div>
+
             </div>
-            <!--popup-main-->
+            <!--/product-->
+        </div>
+
+        <!-- ========================  Product info popup - quick view (product2)======================== -->
+        <div class="popup-main mfp-hide" id="productid2">
+
+            <!-- === product popup === -->
+
+            <div class="product">
+
+                <!-- === popup-title === -->
+
+                <div class="popup-title">
+                    <div class="h1 title">Green Corner <small>product category</small></div>
+                </div>
+
+                <!-- === product gallery === -->
+
+                <div class="owl-product-gallery">
+                    <img src="assets/images/product-1.jpg" alt="" width="640" />
+                </div>
+
+                <!-- === product-popup-info === -->
+
+                <div class="popup-content">
+                    <div class="product-info-wrapper">
+                        <div class="row">
+
+                            <!-- === left-column === -->
+
+                            <div class="col-sm-6">
+                                <div class="info-box">
+                                    <strong>Manufacturer</strong>
+                                    <span>Brand name</span>
+                                </div>
+                                <div class="info-box">
+                                    <strong>Materials</strong>
+                                    <span>Wood, Leather, Acrylic</span>
+                                </div>
+                                <div class="info-box">
+                                    <strong>Availability</strong>
+                                    <span><i class="fa fa-check-square-o"></i> in stock</span>
+                                </div>
+                            </div>
+
+                            <!-- === right-column === -->
+
+                            <div class="col-sm-6">
+                                <div class="info-box">
+                                    <strong>Available Colors</strong>
+                                    <div class="product-colors clearfix">
+                                        <span class="color-btn color-btn-red "></span>
+                                        <span class="color-btn color-btn-blue checked "></span>
+                                        <span class="color-btn color-btn-green"></span>
+                                        <span class="color-btn color-btn-gray"></span>
+                                        <span class="color-btn color-btn-biege"></span>
+                                    </div>
+                                </div>
+                                <div class="info-box">
+                                    <strong>Choose size</strong>
+                                    <div class="product-colors clearfix">
+                                        <span class="color-btn color-btn-biege checked">S</span>
+                                        <span class="color-btn color-btn-biege ">M</span>
+                                        <span class="color-btn color-btn-biege">XL</span>
+                                        <span class="color-btn color-btn-biege">XXL</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <!--/row-->
+                    </div>
+                    <!--/product-info-wrapper-->
+                </div>
+                <!--/popup-content-->
+                <!-- === product-popup-footer === -->
+
+                <div class="popup-table">
+                    <div class="popup-cell">
+                        <div class="price">
+                            <span class="h3">₹ 1099,00 <small>₹ 1499,00</small></span>
+                        </div>
+                    </div>
+                    <div class="popup-cell">
+                        <div class="popup-buttons">
+                            <a><span class="icon icon-eye"></span> <span class="hidden-xs">View
+                                    more</span></a>
+                            <a href="javascript:void(0);"><span class="icon icon-cart"></span> <span
+                                    class="hidden-xs">Buy</span></a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!--/product-->
+        </div>
+        <!--popup-main-->
     </div>
 
-    </div>
     <!--/container-->
-    </section>
 
     <div class="inc:_footer.html"></div>
 
@@ -1095,23 +1190,23 @@
 
     <!--JS bundle -->
     <script src="js/bundle.min.js"></script>
-    <nav style="height:100px;" class="navbar-default">
+    <nav class="navbar-default">
         <div class="container">
-            <div style="margin-top: 30px;" class="navbar-header">
-                <a class="navbar-brand" href="#"></a>
+            <div class="navbar-header">
+                <a class="navbar-brand"></a>
             </div>
-            <ul style="margin-top: 30px;float: right;" class="nav navbar-nav">
-                <li><a href="#"> All Copy right reserved@2022</a></li>
-                <li><a href="#"> </a></li>
-                <li><a href="#"> </a></li>
-                <li><a href="#"> </a></li>
-                <li><a href="#"> </a></li>
-                <li><a href="#"> </a></li>
-                <li><a href="#"></a></li>
-                <li><a href="#"></a></li>
+            <p style="float:right;color:white;margin-top:2px;padding: 10px;">All copy right reserved @2022</p>
             </ul>
         </div>
     </nav>
+    <!--footer style-->
+    <style>
+        @media screen and (max-width: 600px) {
+            .navbar-default .navbar-brand {
+                display: none;
+            }
+        }
+    </style>
 
     <script>
         function myFunction() {

@@ -70,6 +70,12 @@
         padding: 14px 16px;
         text-decoration: none;
         font-size: 17px;
+        height: 70px !important;
+    }
+
+    .container a {
+        margin: 12px;
+        font-weight: bold;
     }
 
     .topnav a:hover {
@@ -89,6 +95,7 @@
     @media screen and (max-width: 600px) {
         .topnav a {
             display: none;
+            height: 50px !important;
         }
 
         .topnav a.icon {
@@ -97,7 +104,12 @@
         }
 
         .container .navbar-header {
+            margin: 10px;
             position: static !important;
+        }
+
+        #navin {
+            background-color: rgb(162, 189, 162) !important;
         }
 
         .navbar-header a {
@@ -117,7 +129,6 @@
         }
 
         .topnav.responsive a {
-            padding-top: 10px;
             float: none;
             display: block;
             text-align: left;
@@ -127,15 +138,15 @@
 
 <body>
 
-    <div class="container">
-        <div class="navbar-header" style="margin:5px;">
-            <img src="assets/images/arrowlogo.jpeg" alt="logo" style="width:50px;height:50px;">
+    <div class="container" id="navin">
+        <div class="navbar-header">
+            <img src="assets/images/arrowlogo.jpeg" alt="logo" style="width:70px;height:70px;border-radius:25px">
             <a style="color:white;" class="navbar-brand" href="#">Arrow Furniture</a>
         </div>
     </div>
     <div class="topnav" id="myTopnav">
-        <a href="#">Contact Us</a>
-        <a href="#">About</a>
+        <a class="active" href="contact.html">Contact Us</a>
+        <a href="about.html">About</a>
         <a href="products-grid.html">Product</a>
         <a href="index.html">Home</a>
         <a href="javascript:void(0);" class="icon" onclick="myFunction()">
@@ -191,7 +202,8 @@
                                             <span class="icon icon-map-marker"></span>
                                             <figcaption>
                                                 <strong>Where are we?</strong>
-                                                <span>200 12th Ave, New York, <br />NY 10001, USA</span>
+                                                <span>29 Church 1st Crosss street,<br />Jeeva Nagar, 2nd street
+                                                    <br>Madurai-11</span>
                                             </figcaption>
                                         </figure>
                                     </div>
@@ -201,8 +213,7 @@
                                             <figcaption>
                                                 <strong>Call us</strong>
                                                 <span>
-                                                    <strong>T</strong> +1 222 333 4444 <br />
-                                                    <strong>F</strong> +1 222 333 5555
+                                                    <strong>T</strong> +91 9842167256 <br />
                                                 </span>
                                             </figcaption>
                                         </figure>
@@ -213,8 +224,8 @@
                                             <figcaption>
                                                 <strong>Working hours</strong>
                                                 <span>
-                                                    <strong>Mon</strong> - Sat: 10 am - 6 pm <br />
-                                                    <strong>Sun</strong> 12pm - 2 pm
+                                                    <strong>Mon- Sat</strong>: 10 am - 6 pm <br />
+                                                    <strong>Sun</strong> : 12pm - 2 pm
                                                 </span>
                                             </figcaption>
                                         </figure>
@@ -285,7 +296,7 @@
                                 </div>
                             </div>
 
-                            <div class="contact-info">
+                            <!-- <div class="contact-info">
                                 <div class="row">
                                     <div class="col-xs-6 col-sm-4">
                                         <figure>
@@ -354,7 +365,7 @@
                                         </figure>
                                     </div>
                                 </div>
-                            </div>
+                            </div> -->
                         </div>
 
 
@@ -367,23 +378,23 @@
         </section>
 
         <div class="inc:_footer.html"></div>
-        <nav style="height:100px;" class="navbar-default">
+        <nav class="navbar-default">
             <div class="container">
-                <div style="margin-top: 30px;" class="navbar-header">
-                    <a class="navbar-brand" href="#"></a>
+                <div class="navbar-header">
+                    <a class="navbar-brand"></a>
                 </div>
-                <ul style="margin-top: 30px;float: right;" class="nav navbar-nav">
-                    <li><a href="#"> All Copy right reserved@2022</a></li>
-                    <li><a href="#"> </a></li>
-                    <li><a href="#"> </a></li>
-                    <li><a href="#"> </a></li>
-                    <li><a href="#"> </a></li>
-                    <li><a href="#"> </a></li>
-                    <li><a href="#"></a></li>
-                    <li><a href="#"></a></li>
+                <p style="float:right;color:white;margin-top:2px;padding: 10px;">All copy right reserved @2022</p>
                 </ul>
             </div>
         </nav>
+        <!--footer style-->
+        <style>
+            @media screen and (max-width: 600px) {
+                .navbar-default .navbar-brand {
+                    display: none;
+                }
+            }
+        </style>
     </div>
     <!--/wrapper-->
 
