@@ -54,7 +54,7 @@
 
     .topnav {
         overflow: hidden;
-        background-color: #333;
+        background-color: white;
     }
 
     .container .navbar-header {
@@ -64,18 +64,14 @@
 
     .topnav a {
         float: right;
-        display: block;
-        color: #f2f2f2;
+        display: flexbox;
+        color: #3e3d3b;
         text-align: center;
-        padding: 14px 16px;
+        padding: 16px 16px;
         text-decoration: none;
         font-size: 17px;
-        height: 70px !important;
-    }
-
-    .container a {
-        margin: 12px;
-        font-weight: bold;
+        height: 70px;
+        font-weight: 600;
     }
 
     .topnav a:hover {
@@ -84,8 +80,8 @@
     }
 
     .topnav a.active {
-        background-color: white;
-        color: black;
+        color: rgb(15, 177, 206);
+        font-weight: 800;
     }
 
     .topnav .icon {
@@ -108,22 +104,21 @@
             position: static !important;
         }
 
-        #navin {
-            background-color: rgb(162, 189, 162) !important;
-        }
+        .topnav {
+            background-color: rgb(128, 111, 111);
 
-        .navbar-header a {
-            color: black !important;
         }
     }
 
     @media screen and (max-width: 600px) {
         .topnav.responsive {
             display: block;
+            background-color: lightgrey;
         }
 
         .topnav.responsive .icon {
             position: absolute;
+            margin: 12px;
             right: 0;
             top: 0;
         }
@@ -140,8 +135,7 @@
 
     <div class="container" id="navin">
         <div class="navbar-header">
-            <img src="assets/images/arrowlogo.jpeg" alt="logo" style="width:70px;height:70px;border-radius:25px">
-            <a style="color:white;" class="navbar-brand" href="#">Arrow Furniture</a>
+            <img src="assets/images/arrowlogo.jpeg" alt="logo" style="width:150px;height:80px;border-radius: 20px;">
         </div>
     </div>
     <div class="topnav" id="myTopnav">
@@ -178,14 +172,20 @@
                 </div>
             </header>
         </section>
+        <br>
 
         <!-- ========================  Contact ======================== -->
 
+
+        <!-- === Goolge map === -->
+        <div class="container">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31443.27362899549!2d78.07478616079584!3d9.899835737743071!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b00cf88bdb6efdb%3A0x8a952f4a7e9c7719!2sJeeva%20Nagar%2C%20Tamil%20Nadu%20625011!5e0!3m2!1sen!2sin!4v1661367927422!5m2!1sen!2sin"
+                width="100%" height="500px" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+        </div>
         <section class="contact">
-
-            <!-- === Goolge map === -->
-
-            <div id="map"></div>
 
             <div class="container">
 
@@ -402,12 +402,12 @@
     <!--JS bundle -->
     <script src="js/bundle.min.js"></script>
 
-    <script>
+    <!-- <script>
         function initMap() {
             var contentString =
                 '<div class="map-info-window">' +
                 '<p><img src="assets/images/logo-dark.png" alt=""></p>' +
-                '<p><strong>Mobel - Furniture factory</strong></p>' +
+                '<p><strong>Arrow Furniture factory</strong></p>' +
                 '<p><i class="fa fa-map-marker"></i> 200 12th Ave, New York, NY 10001, USA</p>' +
                 '<p><i class="fa fa-phone"></i> +12 33 444 555</p>' +
                 '<p><i class="fa fa-clock-o"></i> 10am - 6pm</p>' +
@@ -438,15 +438,15 @@
     </script>
     <script async defer
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAabaAL675kRhFvfrPEmjFUirXHk2cA9Dc&amp;callback=initMap"></script>
-    <script>
-        function myFunction() {
-            var x = document.getElementById("myTopnav");
-            if (x.className === "topnav") {
-                x.className += " responsive";
-            } else {
-                x.className = "topnav";
-            }
-        }
+    <script> -->
+    function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+    x.className += " responsive";
+    } else {
+    x.className = "topnav";
+    }
+    }
     </script>
 </body>
 
