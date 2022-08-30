@@ -16,7 +16,7 @@
     <!-- Meta tags -->
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" href="assets/images/favicon.png">
+    <link rel="icon" href="assets/images/favicon.jpeg">
 
     <!--Title-->
     <title>Products | Arrow Furniture</title>
@@ -39,7 +39,6 @@
 <html lang="en">
 
 <head>
-    <title>Bootstrap Example</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
@@ -49,12 +48,12 @@
 <style>
     body {
         margin: 0;
-        font-family: Arial, Helvetica, sans-serif;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     }
 
     .topnav {
         overflow: hidden;
-        background-color: white;
+        background-color: #00183c;
     }
 
     .container .navbar-header {
@@ -65,7 +64,7 @@
     .topnav a {
         float: right;
         display: flexbox;
-        color: #3e3d3b;
+        color: white;
         text-align: center;
         padding: 16px 16px;
         text-decoration: none;
@@ -80,7 +79,7 @@
     }
 
     .topnav a.active {
-        color: rgb(15, 177, 206);
+        color: rgb(15, 177, 206) !important;
         font-weight: 800;
     }
 
@@ -105,15 +104,19 @@
         }
 
         .topnav {
-            background-color: rgb(128, 111, 111);
+            background-color: #ae7734;
 
+        }
+
+        #navin {
+            background-color: #00183c;
         }
     }
 
     @media screen and (max-width: 600px) {
         .topnav.responsive {
             display: block;
-            background-color: lightgrey;
+            background-color: white;
         }
 
         .topnav.responsive .icon {
@@ -121,12 +124,14 @@
             margin: 12px;
             right: 0;
             top: 0;
+            color: white;
         }
 
         .topnav.responsive a {
             float: none;
             display: block;
             text-align: left;
+            color: black;
         }
     }
 </style>
@@ -135,7 +140,9 @@
 
     <div class="container" id="navin">
         <div class="navbar-header">
-            <img src="assets/images/arrowlogo.jpeg" alt="logo" style="width:150px;height:80px;border-radius: 20px;">
+            <a href="index.html">
+                <img src="assets/images/arrowlogo.jpeg" alt="logo" style="width:90px;height:60px;margin:4px;">
+            </a>
         </div>
     </div>
     <div class="topnav" id="myTopnav">
@@ -618,7 +625,8 @@
                                 </div>
                                 <div class="text">
                                     <h2 class="title h4"><a>Aurora</a></h2>
-                                    <sup>₹ 299,-</sup>
+                                    <sub>₹ 2999,-</sub>
+                                    <sup>₹ 2299,-</sup>
                                     <span class="description clearfix">Gubergren amet dolor ea diam takimata
                                         consetetur facilisis blandit et aliquyam lorem ea duo labore diam
                                         sit et
@@ -728,8 +736,8 @@
                                 </div>
                                 <div class="text">
                                     <h2 class="title h4"><a>Nude</a></h2>
-                                    <sup>₹ 2999,-</sup>
-                                    <sup>₹ 2549,-</sup>
+                                    <sup style="color:white"><strike>₹ 2999,-</strike></sup>
+                                    <sup style="color:white">₹ 2549,-</sup>
                                     <span class="description clearfix">Gubergren amet dolor ea diam takimata
                                         consetetur facilisis blandit et aliquyam lorem ea duo labore diam
                                         sit et
@@ -766,7 +774,8 @@
                                 </div>
                                 <div class="text">
                                     <h2 class="title h4"><a>Aurora</a></h2>
-                                    <sup>₹ 299,-</sup>
+                                    <sub>₹ 2999,-</sub>
+                                    <sup>₹ 2299,-</sup>
                                     <span class="description clearfix">Gubergren amet dolor ea diam takimata
                                         consetetur facilisis blandit et aliquyam lorem ea duo labore diam
                                         sit et
@@ -931,146 +940,601 @@
 
                 </div>
 
-            </div>
-        </div>
+                <div class="product-info-wrapper">
+                    <div class="row">
 
-        <!-- ========================  Product info popup - quick view(product2) ======================== -->
-        <div class="popup-main mfp-hide" id="productid2">
 
-            <!-- === product popup === -->
+                        <div class="col-sm-6">
+                            <div class="info-box">
+                                <strong>Manufacturer</strong>
+                                <span>Brand name</span>
+                            </div>
+                            <div class="info-box">
+                                <strong>Materials</strong>
+                                <span>Wood, Leather, Acrylic</span>
+                            </div>
+                            <div class="info-box">
+                                <strong>Availability</strong>
+                                <span><i class="fa fa-check-square-o"></i> in stock</span>
+                            </div>
+                        </div>
 
-            <div class="product">
 
-                <!-- === popup-title === -->
 
-                <div class="popup-title">
-                    <div class="h1 title">Green Corner<small>product category</small></div>
-                </div>
+                        <div class="col-sm-6">
+                            <div class="info-box">
+                                <strong>Available Colors</strong>
+                                <div class="product-colors clearfix">
+                                    <span class="color-btn color-btn-red checked"></span>
+                                    <span class="color-btn color-btn-blue"></span>
+                                    <span class="color-btn color-btn-green"></span>
+                                    <span class="color-btn color-btn-gray"></span>
+                                    <span class="color-btn color-btn-biege"></span>
+                                </div>
+                            </div>
+                            <div class="info-box">
+                                <strong>Choose size</strong>
+                                <div class="product-colors clearfix">
+                                    <span class="color-btn color-btn-biege">S</span>
+                                    <span class="color-btn color-btn-biege checked">M</span>
+                                    <span class="color-btn color-btn-biege">XL</span>
+                                    <span class="color-btn color-btn-biege">XXL</span>
+                                </div>
+                            </div>
+                        </div>
 
-                <!-- === product gallery === -->
-
-                <div class="owl-product-gallery">
-                    <img src="assets/images/product-1.jpg" alt="" width="640" />
-
-                </div>
-
-            </div>
-        </div>
-
-        <!-- ========================  Product info popup - quick view(product3) ======================== -->
-        <div class="popup-main mfp-hide" id="productid3">
-
-            <!-- === product popup === -->
-
-            <div class="product">
-
-                <!-- === popup-title === -->
-
-                <div class="popup-title">
-                    <div class="h1 title">Laura<small>product category</small></div>
-                </div>
-
-                <!-- === product gallery === -->
-
-                <div class="owl-product-gallery">
-                    <img src="assets/images/product-2.jpg" alt="" width="640" />
-
-                </div>
-
-            </div>
-        </div>
-
-        <!-- ========================  Product info popup - quick view(product4) ======================== -->
-        <div class="popup-main mfp-hide" id="productid4">
-
-            <!-- === product popup === -->
-
-            <div class="product">
-
-                <!-- === popup-title === -->
-
-                <div class="popup-title">
-                    <div class="h1 title">Nude<small>product category</small></div>
-                </div>
-
-                <!-- === product gallery === -->
-
-                <div class="owl-product-gallery">
-                    <img src="assets/images/product-5.jpg" alt="" width="640" />
+                    </div>
 
                 </div>
 
             </div>
-        </div>
 
-        <!-- ========================  Product info popup - quick view(product6) ======================== -->
-        <div class="popup-main mfp-hide" id="productid5">
 
-            <!-- === product popup === -->
-
-            <div class="product">
-
-                <!-- === popup-title === -->
-
-                <div class="popup-title">
-                    <div class="h1 title">Dining Set<small>product category</small></div>
+            <div class="popup-table table-bordered">
+                <div class="popup-cell">
+                    <div class="price">
+                        <span class="h3">₹ 2299.00 <small><strike>₹ 2999.00</strike></small></span>
+                    </div>
                 </div>
+                <div class="popup-cell">
+                    <div class="popup-buttons">
+                        <a><span class="icon icon-eye"></span> <span class="hidden-xs">View
+                                more</span></a>
+                        <a><span class=" icon icon-cart"></span> <span class="hidden-xs">Buy</span></a>
+                    </div>
+                </div>
+            </div>
 
-                <!-- === product gallery === -->
+        </div>
+    </div>
 
-                <div class="owl-product-gallery">
-                    <img src="assets/images/product-6.jpg" alt="" width="640" />
+    <!-- ========================  Product info popup - quick view(product2) ======================== -->
+    <div class="popup-main mfp-hide" id="productid2">
+
+        <!-- === product popup === -->
+
+        <div class="product">
+
+            <!-- === popup-title === -->
+
+            <div class="popup-title">
+                <div class="h1 title">Green Corner<small>product category</small></div>
+            </div>
+
+            <!-- === product gallery === -->
+
+            <div class="owl-product-gallery">
+                <img src="assets/images/product-1.jpg" alt="" width="640" />
+
+            </div>
+
+            <div class="product-info-wrapper">
+                <div class="row">
+
+
+                    <div class="col-sm-6">
+                        <div class="info-box">
+                            <strong>Manufacturer</strong>
+                            <span>Brand name</span>
+                        </div>
+                        <div class="info-box">
+                            <strong>Materials</strong>
+                            <span>Wood, Leather, Acrylic</span>
+                        </div>
+                        <div class="info-box">
+                            <strong>Availability</strong>
+                            <span><i class="fa fa-check-square-o"></i> in stock</span>
+                        </div>
+                    </div>
+
+
+
+                    <div class="col-sm-6">
+                        <div class="info-box">
+                            <strong>Available Colors</strong>
+                            <div class="product-colors clearfix">
+                                <span class="color-btn color-btn-red"></span>
+                                <span class="color-btn color-btn-blue checked"></span>
+                                <span class="color-btn color-btn-green"></span>
+                                <span class="color-btn color-btn-gray"></span>
+                                <span class="color-btn color-btn-biege"></span>
+                            </div>
+                        </div>
+                        <div class="info-box">
+                            <strong>Choose size</strong>
+                            <div class="product-colors clearfix">
+                                <span class="color-btn color-btn-biege">S</span>
+                                <span class="color-btn color-btn-biege checked">M</span>
+                                <span class="color-btn color-btn-biege">XL</span>
+                                <span class="color-btn color-btn-biege">XXL</span>
+                            </div>
+                        </div>
+                    </div>
 
                 </div>
 
             </div>
+
         </div>
 
-        <!-- ========================  Product info popup - quick view(product7) ======================== -->
-        <div class="popup-main mfp-hide" id="productid6">
 
-            <!-- === product popup === -->
-
-            <div class="product">
-
-                <!-- === popup-title === -->
-
-                <div class="popup-title">
-                    <div class="h1 title">Seat Chair<small>product category</small></div>
+        <div class="popup-table table-bordered">
+            <div class="popup-cell">
+                <div class="price">
+                    <span class="h3">₹ 1099,00 <small><strike>₹ 1499,00</strike></small></span>
                 </div>
+            </div>
+            <div class="popup-cell">
+                <div class="popup-buttons">
+                    <a><span class="icon icon-eye"></span> <span class="hidden-xs">View
+                            more</span></a>
+                    <a><span class=" icon icon-cart"></span> <span class="hidden-xs">Buy</span></a>
+                </div>
+            </div>
+        </div>
 
-                <!-- === product gallery === -->
+    </div>
+    </div>
 
-                <div class="owl-product-gallery">
-                    <img src="assets/images/product-3.jpg" alt="" width="640" />
+    <!-- ========================  Product info popup - quick view(product3) ======================== -->
+    <div class="popup-main mfp-hide" id="productid3">
+
+        <!-- === product popup === -->
+
+        <div class="product">
+
+            <!-- === popup-title === -->
+
+            <div class="popup-title">
+                <div class="h1 title">Laura<small>product category</small></div>
+            </div>
+
+            <!-- === product gallery === -->
+
+            <div class="owl-product-gallery">
+                <img src="assets/images/product-2.jpg" alt="" width="640" />
+
+            </div>
+
+            <div class="product-info-wrapper">
+                <div class="row">
+
+
+                    <div class="col-sm-6">
+                        <div class="info-box">
+                            <strong>Manufacturer</strong>
+                            <span>Brand name</span>
+                        </div>
+                        <div class="info-box">
+                            <strong>Materials</strong>
+                            <span>Wood, Leather, Acrylic</span>
+                        </div>
+                        <div class="info-box">
+                            <strong>Availability</strong>
+                            <span><i class="fa fa-check-square-o"></i> in stock</span>
+                        </div>
+                    </div>
+
+
+
+                    <div class="col-sm-6">
+                        <div class="info-box">
+                            <strong>Available Colors</strong>
+                            <div class="product-colors clearfix">
+                                <span class="color-btn color-btn-red"></span>
+                                <span class="color-btn color-btn-blue"></span>
+                                <span class="color-btn color-btn-green"></span>
+                                <span class="color-btn color-btn-gray checked"></span>
+                                <span class="color-btn color-btn-biege"></span>
+                            </div>
+                        </div>
+                        <div class="info-box">
+                            <strong>Choose size</strong>
+                            <div class="product-colors clearfix">
+                                <span class="color-btn color-btn-biege">S</span>
+                                <span class="color-btn color-btn-biege">M</span>
+                                <span class="color-btn color-btn-biege checked">XL</span>
+                                <span class="color-btn color-btn-biege">XXL</span>
+                            </div>
+                        </div>
+                    </div>
 
                 </div>
 
             </div>
+
         </div>
 
-        <!-- ========================  Product info popup - quick view(product8) ======================== -->
-        <div class="popup-main mfp-hide" id="productid7">
 
-            <!-- === product popup === -->
-
-            <div class="product">
-
-                <!-- === popup-title === -->
-
-                <div class="popup-title">
-                    <div class="h1 title">Sofa<small>product category</small></div>
+        <div class="popup-table table-bordered">
+            <div class="popup-cell">
+                <div class="price">
+                    <span class="h3">₹ 3499,00 <small><strike>₹ 3999,00</strike></small></span>
                 </div>
+            </div>
+            <div class="popup-cell">
+                <div class="popup-buttons">
+                    <a><span class="icon icon-eye"></span> <span class="hidden-xs">View
+                            more</span></a>
+                    <a><span class=" icon icon-cart"></span> <span class="hidden-xs">Buy</span></a>
+                </div>
+            </div>
+        </div>
 
-                <!-- === product gallery === -->
+    </div>
+    </div>
 
-                <div class="owl-product-gallery">
-                    <img src="assets/images/product-7.jpg" alt="" width="640" />
+    <!-- ========================  Product info popup - quick view(product4) ======================== -->
+    <div class="popup-main mfp-hide" id="productid4">
+
+        <!-- === product popup === -->
+
+        <div class="product">
+
+            <!-- === popup-title === -->
+
+            <div class="popup-title">
+                <div class="h1 title">Nude<small>product category</small></div>
+            </div>
+
+            <!-- === product gallery === -->
+
+            <div class="owl-product-gallery">
+                <img src="assets/images/product-5.jpg" alt="" width="640" />
+
+            </div>
+
+            <div class="product-info-wrapper">
+                <div class="row">
+
+
+                    <div class="col-sm-6">
+                        <div class="info-box">
+                            <strong>Manufacturer</strong>
+                            <span>Brand name</span>
+                        </div>
+                        <div class="info-box">
+                            <strong>Materials</strong>
+                            <span>Wood, Leather, Acrylic</span>
+                        </div>
+                        <div class="info-box">
+                            <strong>Availability</strong>
+                            <span><i class="fa fa-check-square-o"></i> in stock</span>
+                        </div>
+                    </div>
+
+
+
+                    <div class="col-sm-6">
+                        <div class="info-box">
+                            <strong>Available Colors</strong>
+                            <div class="product-colors clearfix">
+                                <span class="color-btn color-btn-red"></span>
+                                <span class="color-btn color-btn-blue checked"></span>
+                                <span class="color-btn color-btn-green"></span>
+                                <span class="color-btn color-btn-gray"></span>
+                                <span class="color-btn color-btn-biege"></span>
+                            </div>
+                        </div>
+                        <div class="info-box">
+                            <strong>Choose size</strong>
+                            <div class="product-colors clearfix">
+                                <span class="color-btn color-btn-biege">S</span>
+                                <span class="color-btn color-btn-biege checked">M</span>
+                                <span class="color-btn color-btn-biege">XL</span>
+                                <span class="color-btn color-btn-biege">XXL</span>
+                            </div>
+                        </div>
+                    </div>
 
                 </div>
 
             </div>
+
         </div>
+
+
+        <div class="popup-table table-bordered">
+            <div class="popup-cell">
+                <div class="price">
+                    <span class="h3">₹ 2599,00 <small><strike>₹ 2999,00</strike></small></span>
+                </div>
+            </div>
+            <div class="popup-cell">
+                <div class="popup-buttons">
+                    <a><span class="icon icon-eye"></span> <span class="hidden-xs">View
+                            more</span></a>
+                    <a><span class=" icon icon-cart"></span> <span class="hidden-xs">Buy</span></a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    </div>
+
+    <!-- ========================  Product info popup - quick view(product6) ======================== -->
+    <div class="popup-main mfp-hide" id="productid5">
+
+        <!-- === product popup === -->
+
+        <div class="product">
+
+            <!-- === popup-title === -->
+
+            <div class="popup-title">
+                <div class="h1 title">Dining Set<small>product category</small></div>
+            </div>
+
+            <!-- === product gallery === -->
+
+            <div class="owl-product-gallery">
+                <img src="assets/images/product-6.jpg" alt="" width="640" />
+
+            </div>
+
+            <div class="product-info-wrapper">
+                <div class="row">
+
+
+                    <div class="col-sm-6">
+                        <div class="info-box">
+                            <strong>Manufacturer</strong>
+                            <span>Brand name</span>
+                        </div>
+                        <div class="info-box">
+                            <strong>Materials</strong>
+                            <span>Wood, Leather, Acrylic</span>
+                        </div>
+                        <div class="info-box">
+                            <strong>Availability</strong>
+                            <span><i class="fa fa-check-square-o"></i> in stock</span>
+                        </div>
+                    </div>
+
+
+
+                    <div class="col-sm-6">
+                        <div class="info-box">
+                            <strong>Available Colors</strong>
+                            <div class="product-colors clearfix">
+                                <span class="color-btn color-btn-red"></span>
+                                <span class="color-btn color-btn-black checked"></span>
+                                <span class="color-btn color-btn-green"></span>
+                                <span class="color-btn color-btn-gray"></span>
+                                <span class="color-btn color-btn-biege"></span>
+                            </div>
+                        </div>
+                        <div class="info-box">
+                            <strong>Choose size</strong>
+                            <div class="product-colors clearfix">
+                                <span class="color-btn color-btn-biege">S</span>
+                                <span class="color-btn color-btn-biege checked">M</span>
+                                <span class="color-btn color-btn-biege">XL</span>
+                                <span class="color-btn color-btn-biege">XXL</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="popup-table table-bordered">
+            <div class="popup-cell">
+                <div class="price">
+                    <span class="h3">₹ 1499,00 <small><strike>₹ 1999,00</strike></small></span>
+                </div>
+            </div>
+            <div class="popup-cell">
+                <div class="popup-buttons">
+                    <a><span class="icon icon-eye"></span> <span class="hidden-xs">View
+                            more</span></a>
+                    <a><span class=" icon icon-cart"></span> <span class="hidden-xs">Buy</span></a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    </div>
+
+    <!-- ========================  Product info popup - quick view(product7) ======================== -->
+    <div class="popup-main mfp-hide" id="productid6">
+
+        <!-- === product popup === -->
+
+        <div class="product">
+
+            <!-- === popup-title === -->
+
+            <div class="popup-title">
+                <div class="h1 title">Seat Chair<small>product category</small></div>
+            </div>
+
+            <!-- === product gallery === -->
+
+            <div class="owl-product-gallery">
+                <img src="assets/images/product-3.jpg" alt="" width="640" />
+
+            </div>
+
+            <div class="product-info-wrapper">
+                <div class="row">
+
+
+                    <div class="col-sm-6">
+                        <div class="info-box">
+                            <strong>Manufacturer</strong>
+                            <span>Brand name</span>
+                        </div>
+                        <div class="info-box">
+                            <strong>Materials</strong>
+                            <span>Wood, Leather, Acrylic</span>
+                        </div>
+                        <div class="info-box">
+                            <strong>Availability</strong>
+                            <span><i class="fa fa-check-square-o"></i> Limited</span>
+                        </div>
+                    </div>
+
+
+
+                    <div class="col-sm-6">
+                        <div class="info-box">
+                            <strong>Available Colors</strong>
+                            <div class="product-colors clearfix">
+                                <span class="color-btn color-btn-red"></span>
+                                <span class="color-btn color-btn-blue"></span>
+                                <span class="color-btn color-btn-green checked"></span>
+                                <span class="color-btn color-btn-gray"></span>
+                                <span class="color-btn color-btn-biege"></span>
+                            </div>
+                        </div>
+                        <div class="info-box">
+                            <strong>Choose size</strong>
+                            <div class="product-colors clearfix">
+                                <span class="color-btn color-btn-biege">S</span>
+                                <span class="color-btn color-btn-biege checked">M</span>
+                                <span class="color-btn color-btn-biege">XL</span>
+                                <span class="color-btn color-btn-biege">XXL</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="popup-table table-bordered">
+            <div class="popup-cell">
+                <div class="price">
+                    <span class="h3">₹ 999,00 <small><strike>₹ 799,00</strike></small></span>
+                </div>
+            </div>
+            <div class="popup-cell">
+                <div class="popup-buttons">
+                    <a><span class="icon icon-eye"></span> <span class="hidden-xs">View
+                            more</span></a>
+                    <a><span class=" icon icon-cart"></span> <span class="hidden-xs">Buy</span></a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    </div>
+
+    <!-- ========================  Product info popup - quick view(product8) ======================== -->
+    <div class="popup-main mfp-hide" id="productid7">
+
+        <!-- === product popup === -->
+
+        <div class="product">
+
+            <!-- === popup-title === -->
+
+            <div class="popup-title">
+                <div class="h1 title">Sofa<small>product category</small></div>
+            </div>
+
+            <!-- === product gallery === -->
+
+            <div class="owl-product-gallery">
+                <img src="assets/images/product-7.jpg" alt="" width="640" />
+
+            </div>
+
+            <div class="product-info-wrapper">
+                <div class="row">
+
+
+                    <div class="col-sm-6">
+                        <div class="info-box">
+                            <strong>Manufacturer</strong>
+                            <span>Brand name</span>
+                        </div>
+                        <div class="info-box">
+                            <strong>Materials</strong>
+                            <span>Wood, Leather, Acrylic</span>
+                        </div>
+                        <div class="info-box">
+                            <strong>Availability</strong>
+                            <span><i class="fa fa-check-square-o"></i> in stock</span>
+                        </div>
+                    </div>
+
+
+
+                    <div class="col-sm-6">
+                        <div class="info-box">
+                            <strong>Available Colors</strong>
+                            <div class="product-colors clearfix">
+                                <span class="color-btn color-btn-red"></span>
+                                <span class="color-btn color-btn-blue "></span>
+                                <span class="color-btn color-btn-green"></span>
+                                <span class="color-btn color-btn-gray checked"></span>
+                                <span class="color-btn color-btn-biege"></span>
+                            </div>
+                        </div>
+                        <div class="info-box">
+                            <strong>Choose size</strong>
+                            <div class="product-colors clearfix">
+                                <span class="color-btn color-btn-biege">S</span>
+                                <span class="color-btn color-btn-biege checked">M</span>
+                                <span class="color-btn color-btn-biege">XL</span>
+                                <span class="color-btn color-btn-biege">XXL</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="popup-table table-bordered">
+            <div class="popup-cell">
+                <div class="price">
+                    <span class="h3">₹ 1099,00 <small><strike>₹ 1499,00</strike></small></span>
+                </div>
+            </div>
+            <div class="popup-cell">
+                <div class="popup-buttons">
+                    <a><span class="icon icon-eye"></span> <span class="hidden-xs">View
+                            more</span></a>
+                    <a><span class=" icon icon-cart"></span> <span class="hidden-xs">Buy</span></a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    </div>
 
 
 
