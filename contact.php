@@ -10,7 +10,7 @@ if(isset($_POST['btnsubmit'])){
 
     $headers = "From:" . $from;
     $headers2 = "From:" . $to;
-    mail('<jayaprasad356@gmail.com>',$subject,$message,$headers);
+    mail('<jayaprasad356@gmail.com>',$subject,$message,$headers, "-f noreply@mydomain.com");
 
 }
 
