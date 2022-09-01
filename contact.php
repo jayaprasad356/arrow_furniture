@@ -5,7 +5,7 @@ if(isset($_POST['btnsubmit'])){
     $from = "support@arrow.greymatterworks.in"; // this is the sender's Email address
     $name = $_POST['name'];
     $subject = $_POST['subject'];
-    $message = 'From Email : '.$from.' - message : '.$_POST['message'];
+    $message = 'Name : '.$name.'From Email : '.$_POST['email'].' - message : '.$_POST['message'];
     // $message2 = "Here is a copy of your message " . $first_name . "\n\n" . $_POST['message'];
 
     $headers = "From:" . $from;
