@@ -2,10 +2,10 @@
 
 if(isset($_POST['btnsubmit'])){
     $to = "divakarvan03@gmail.com"; // this is your Email address
-    $from = "jp@greymatterworks.in"; // this is the sender's Email address
+    $from = "support@arrow.greymatterworks.in"; // this is the sender's Email address
     $name = $_POST['name'];
     $subject = $_POST['subject'];
-    $message = 'From Email '.$from.'\n'.$_POST['message'];
+    $message = 'From Email : '.$from.' - message : '.$_POST['message'];
     // $message2 = "Here is a copy of your message " . $first_name . "\n\n" . $_POST['message'];
 
     $headers = "From:" . $from;
