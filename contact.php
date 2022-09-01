@@ -1,8 +1,26 @@
-﻿<!DOCTYPE html>
+﻿<?php
+
+if(isset($_POST['btnsubmit'])){
+    $to = "jp@greymatterworks.in"; // this is your Email address
+    $from = $_POST['email']; // this is the sender's Email address
+    $name = $_POST['name'];
+    $subject = $_POST['subject'];
+    $message = $_POST['message'];
+    // $message2 = "Here is a copy of your message " . $first_name . "\n\n" . $_POST['message'];
+
+    $headers = "From:" . $from;
+    $headers2 = "From:" . $to;
+    mail($to,$subject,$message,$headers);
+
+}
+
+?>
+
+<!DOCTYPE html>
 <html lang="en">
 
 
-<!-- Mirrored from www.elathemes.com/themes/mobel/contact.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 31 Jul 2022 11:36:53 GMT -->
+<!-- Mirrored from www.elathemes.com/themes/mobel/contact.php by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 31 Jul 2022 11:36:53 GMT -->
 
 <head>
     <meta charset="utf-8">
@@ -147,7 +165,7 @@
         </div>
     </div>
     <div class="topnav" id="myTopnav">
-        <a class="active" href="contact.html">Contact Us</a>
+        <a class="active" href="contact.php">Contact Us</a>
         <a href="about.html">About</a>
         <a href="products-grid.html">Product</a>
         <a href="index.html">Home</a>
@@ -161,7 +179,7 @@
 
 <body>
 
-    <div class="page-loader"></div>
+    <!-- <div class="page-loader"></div> -->
 
     <div class="wrapper">
 
@@ -175,7 +193,7 @@
                     <h2 class="h2 title">Contact</h2>
                     <ol class="breadcrumb breadcrumb-inverted">
                         <li><a href="index.html"><span class="icon icon-home"></span></a></li>
-                        <li><a class="active" href="contact.html">Contact</a></li>
+                        <li><a class="active" href="contact.php">Contact</a></li>
                     </ol>
                 </div>
             </header>
@@ -254,49 +272,47 @@
 
                                         <div class="contact-form-wrapper">
 
-                                            <a class="btn btn-clean open-form" data-text-open="Contact us via form"
-                                                data-text-close="Close form">Contact us via form</a>
+                                            <!-- <a class="btn btn-clean open-form" data-text-open="Contact us via form"
+                                                data-text-close="Close form">Contact us via form</a> -->
 
-                                            <div class="contact-form clearfix">
                                                 <form id="sendmail" name="sendmail" enctype="multipart/form-data"
                                                     method="post">
                                                     <div class="row">
                                                         <div class="col-md-6">
                                                             <div class="form-group">
-                                                                <input id="Name" name="Name" type="text"
+                                                                <input id="Name" name="name" type="text"
                                                                     class="form-control" placeholder="Your name">
                                                             </div>
                                                         </div>
 
                                                         <div class="col-md-6">
                                                             <div class="form-group">
-                                                                <input id="Email" name="Email" type="email"
+                                                                <input id="Email" name="email" type="email"
                                                                     class="form-control" placeholder="Your email">
                                                             </div>
                                                         </div>
 
                                                         <div class="col-md-12">
                                                             <div class="form-group">
-                                                                <input id="Subject" name="Subject" type="text"
+                                                                <input id="Subject" name="subject" type="text"
                                                                     class="form-control" placeholder="Subject">
                                                             </div>
                                                         </div>
 
                                                         <div class="col-md-12">
                                                             <div class="form-group">
-                                                                <textarea id="Comment" name="Comment"
+                                                                <textarea id="Comment" name="message"
                                                                     class="form-control" placeholder="Your message"
                                                                     rows="10"></textarea>
                                                             </div>
                                                         </div>
 
                                                         <div class="col-md-12 text-center">
-                                                            <input type="submit" class="btn btn-clean"
+                                                            <input type="submit" name="btnsubmit" class="btn btn-clean"
                                                                 value="Send message" />
                                                         </div>
                                                     </div>
                                                 </form>
-                                            </div>
                                         </div>
 
                                     </div>
@@ -407,7 +423,7 @@
 
 
     <!--JS bundle -->
-    <script src="js/bundle.min.js"></script>
+    <!-- <script src="js/bundle.min.js"></script> -->
     <!-- 
     <script>
         function initMap() {
@@ -458,6 +474,6 @@
 </body>
 
 
-<!-- Mirrored from www.elathemes.com/themes/mobel/contact.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 31 Jul 2022 11:36:54 GMT -->
+<!-- Mirrored from www.elathemes.com/themes/mobel/contact.php by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 31 Jul 2022 11:36:54 GMT -->
 
 </html>
