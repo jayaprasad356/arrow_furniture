@@ -1,7 +1,7 @@
 ﻿<?php
 
 if(isset($_POST['btnsubmit'])){
-    $to = "divakarvan03@gmail.com"; // this is your Email address
+    $to = "jayaprasad356@gmail.com"; // this is your Email address
     $from = $_POST['email']; // this is the sender's Email address
     $name = $_POST['name'];
     $subject = $_POST['subject'];
@@ -10,7 +10,10 @@ if(isset($_POST['btnsubmit'])){
 
     $headers = "From:" . $from;
     $headers2 = "From:" . $to;
-    mail('<jayaprasad356@gmail.com>',$subject,$message,$headers, "-f noreply@mydomain.com");
+    mail($to,$subject,$message,$headers);
+
+    $headers = 'From: <jandraid@gmail.com>' . "\r\n" .'Reply-To: <jayaprasd356@gmail.com>';
+    mail('<jayaprasd356@gmail.com>', 'the subject', 'the message', $headers,'-fwebmaster@example.com');
 
 }
 
