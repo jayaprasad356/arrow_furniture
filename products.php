@@ -607,51 +607,59 @@ $db->sql("SET NAMES 'utf8'");
                             </div>
                         </div>
                     </div>
+            
 
+        
+                        <!-- === header title === -->
+        
+                        <header>
+                            <div class="row">
+                                <div class="col-md-offset-2 col-md-8 text-center">
+                                    <h2 class="title">Popular Products</h2>
+                                    <div class="text">
+                                        <p>Check out our latest collections</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </header>
 
                     <!-- === product-item === -->
-                    <?php
-                        $sql = "SELECT * FROM `products`";
-                        $db->sql($sql);
-                        $result = $db->getResult();
-                        foreach ($result as $value) {
-                        ?>
-                  <div class="col-md-6 col-xs-6">
-                        <article>
-                            <div class="info">
-                                <span class="add-favorite">
-                                    <a href="javascript:void(0);" data-title="Add to favorites"
-                                        data-title-added="Added to favorites list"><i class="icon icon-heart"></i></a>
-                                </span>
-                                <span>
-                                    <a href="#productid1" class="mfp-open" data-title="Quick wiew"><i
-                                            class="icon icon-eye"></i></a>
-                                </span>
-                            </div>
-                            <div class="btn btn-add">
-                                <i class="icon icon-cart"></i>
-                            </div>
-                            <div class="figure-grid">
-                                <span class="label label-warning">New</span>
-                                <div class="image">
-                                    <a href="#productid1" class="mfp-open">
-                                        <img src="<?php echo $value['image']; ?>" alt="" />
-                                    </a>
-                                </div>
-                                <div class="text">
-                                    <h2 class="title h4"><a>Aurora</a></h2>
-                                    <sub>₹ 2999,-</sub>
-                                    <sup>₹ 2299,-</sup>
-                                    <span class="description clearfix">Gubergren amet dolor ea diam takimata
-                                        consetetur facilisis blandit et aliquyam lorem ea duo labore diam
-                                        sit et
-                                        consetetur nulla</span>
-                                </div>
-                            </div>
-                        </article>
-                     </div>
+                    <div class="col-md-6 col-xs-6">
+
+<article>
+    <div class="info">
+        <span class="add-favorite">
+            <a href="javascript:void(0);" data-title="Add to favorites"
+                data-title-added="Added to favorites list"><i class="icon icon-heart"></i></a>
+        </span>
+        <span>
+            <a href="#productid1" class="mfp-open" data-title="Quick wiew"><i
+                    class="icon icon-eye"></i></a>
+        </span>
+    </div>
+    <div class="btn btn-add">
+        <i class="icon icon-cart"></i>
+    </div>
+    <div class="figure-grid">
+        <span class="label label-info">-50%</span>
+        <div class="image">
+            <a href="#productid1" class="mfp-open">
+                <img src="assets/images/product-4.jpg" alt="" width="360" />
+            </a>
+        </div>
+        <div class="text">
+            <h2 class="title h4"><a>AURORA</a></h2>
+            <sub>₹ 2299,-</sub>
+            <sup>₹ 2999,-</sup>
+            <span class="description clearfix">Gubergren amet dolor ea diam takimata
+                consetetur facilisis blandit et aliquyam lorem ea duo labore diam
+                sit et
+                consetetur nulla</span>
+        </div>
+    </div>
+</article>
+</div>
                                    
-                        <?php } ?>
 
 
                     <!-- === product-item === -->
