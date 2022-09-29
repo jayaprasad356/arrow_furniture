@@ -168,7 +168,7 @@ if(isset($_POST['btnsubmit'])){
     <div class="topnav" id="myTopnav">
         <a class="active" href="contact.php">Contact Us</a>
         <a href="about.html">About</a>
-        <a href="products-grid.html">Product</a>
+        <a href="products.php">Product</a>
         <a href="index.html">Home</a>
         <a href="javascript:void(0);" class="icon" onclick="myFunction()">
             <i class="fa fa-bars"></i>

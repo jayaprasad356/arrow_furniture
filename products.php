@@ -1,4 +1,16 @@
-﻿<!DOCTYPE html>
+﻿<?php
+include_once('includes/functions.php');
+$function = new functions;
+include_once('includes/custom-functions.php');
+$fn = new custom_functions;
+include_once('includes/crud.php');
+$db = new Database();
+$db->connect();
+$db->sql("SET NAMES 'utf8'");
+?>
+
+
+<!DOCTYPE html>
 <html lang="en">
 
 
@@ -148,7 +160,7 @@
     <div class="topnav" id="myTopnav">
         <a href="contact.php">Contact Us</a>
         <a href="about.html">About</a>
-        <a class="active" href="products-grid.html">Product</a>
+        <a class="active" href="products.php">Product</a>
         <a href="index.html">Home</a>
         <a href="javascript:void(0);" class="icon" onclick="myFunction()">
             <i class="fa fa-bars"></i>
@@ -162,7 +174,7 @@
 
 <body>
 
-    <div class="page-loader"></div>
+    
 
     <div class="wrapper">
 
@@ -198,7 +210,7 @@
 
                     <!-- === icon item === -->
 
-                    <a href="#">
+                    <a href="sofa.php">
                         <figure>
                             <i class="f-icon f-icon-sofa"></i>
                             <figcaption>Sofa</figcaption>
@@ -206,11 +218,18 @@
                     </a>
 
                     <!-- === icon item === -->
-
-                    <a href="#">
+                    <a href="tables.php">
                         <figure>
-                            <i class="f-icon f-icon-armchair"></i>
-                            <figcaption>Armchairs</figcaption>
+                            <i class="f-icon f-icon-table"></i>
+                            <figcaption>Tables</figcaption>
+                        </figure>
+                    </a>
+
+                    <!-- === icon item === -->
+                    <a href="cots.php">
+                        <figure>
+                            <i class="f-icon f-icon-bedroom"></i>
+                            <figcaption>Wooden Cots</figcaption>
                         </figure>
                     </a>
 
@@ -238,15 +257,6 @@
                         <figure>
                             <i class="f-icon f-icon-media-cabinet"></i>
                             <figcaption>Media storage</figcaption>
-                        </figure>
-                    </a>
-
-                    <!-- === icon item === -->
-
-                    <a href="#">
-                        <figure>
-                            <i class="f-icon f-icon-table"></i>
-                            <figcaption>Tables</figcaption>
                         </figure>
                     </a>
 
@@ -600,8 +610,13 @@
 
 
                     <!-- === product-item === -->
-
-                    <div class="col-md-6 col-xs-6">
+                    <?php
+                        $sql = "SELECT * FROM `products`";
+                        $db->sql($sql);
+                        $result = $db->getResult();
+                        foreach ($result as $value) {
+                        ?>
+                  <div class="col-md-6 col-xs-6">
                         <article>
                             <div class="info">
                                 <span class="add-favorite">
@@ -620,7 +635,7 @@
                                 <span class="label label-warning">New</span>
                                 <div class="image">
                                     <a href="#productid1" class="mfp-open">
-                                        <img src="assets/images/product-4.jpg" alt="" width="360" />
+                                        <img src="<?php echo $value['image']; ?>" alt="" />
                                     </a>
                                 </div>
                                 <div class="text">
@@ -634,7 +649,9 @@
                                 </div>
                             </div>
                         </article>
-                    </div>
+                     </div>
+                                   
+                        <?php } ?>
 
 
                     <!-- === product-item === -->
