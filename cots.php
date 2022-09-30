@@ -58,115 +58,189 @@ $db->sql("SET NAMES 'utf8'");
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
 <style>
-    body {
+     body {
         margin: 0;
         font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     }
-
-    .topnav {
-        overflow: hidden;
-        background-color: #00183c;
-    }
-
-    .container .navbar-header {
-        float: left !important;
-        position: absolute !important;
-    }
-
-    .topnav a {
-        float: right;
-        display: flexbox;
-        color: white;
-        text-align: center;
-        padding: 16px 16px;
-        text-decoration: none;
-        font-size: 17px;
-        height: 70px;
-        font-weight: 600;
-    }
-
-    .topnav a:hover {
-        background-color: #ddd;
-        color: black;
-    }
-
-    .topnav a.active {
-        color: rgb(15, 177, 206) !important;
-        font-weight: 800;
-    }
-
-    .topnav .icon {
-        display: none;
-    }
-
-    @media screen and (max-width: 600px) {
-        .topnav a {
-            display: none;
-            height: 50px !important;
-        }
-
-        .topnav a.icon {
-            float: right;
-            display: block;
-        }
-
-        .container .navbar-header {
-            margin: 10px;
-            position: static !important;
-        }
-
-        .topnav {
-            background-color: #ae7734;
-
-        }
-
-        #navin {
+    #navin {
             background-color: #00183c;
+            position: relative!important;
         }
-    }
+        nav {    
+  display: block;
+  text-align: center;
+  top:0;
+  margin-top: 10px;
 
-    @media screen and (max-width: 600px) {
-        .topnav.responsive {
-            display: block;
-            background-color: white;
-        }
+}
+nav ul {
+  top: 0!important;
+  padding: 0;
+  list-style: none;
+  position: absolute;
+  float: right;
+}
+.nav a {
+  display:block; 
+  color: #fff; 
+  text-decoration: none;
+  padding: 0.8em 1.8em;
+  text-transform: uppercase;
+  font-size: 80%;
+  font-weight: 900;
+  letter-spacing: 2px;
+  position: relative;
+}
+.nav ul li a{
+    background-color: black;
+}
+.nav{  
+  vertical-align: top; 
+  display: inline-block;
+  border-radius:6px;
+}
+.nav li {
+  position: relative;
+}
+.nav > li { 
+  float: left; 
+  margin-right: 1px; 
+  
+} 
+.nav > li > a { 
+ font-size: 15px;
+ font-weight: 900;
+  color: white!important;
 
-        .topnav.responsive .icon {
-            position: absolute;
-            margin: 12px;
-            right: 0;
-            top: 0;
-            color: white;
-        }
+}
+.nav > li > a:hover { 
+ font-size: 15px;
+ font-weight: 900;
+  color: black!important;
 
-        .topnav.responsive a {
-            float: none;
-            display: block;
-            text-align: left;
-            color: black;
-        }
+}
+.nav > li > a:active { 
+
+  color: rgb(15, 177, 206) !important;
+
+}
+.nav > li:hover, 
+.nav > li:hover > a { 
+  border-bottom-color: orange;
+}
+.nav li:hover > a { 
+  color:orange; 
+}
+.nav > li:first-child { 
+  border-radius: 4px 0 0 4px;
+} 
+.nav > li:first-child > a { 
+  border-radius: 4px 0 0 0;
+}
+.nav > li:last-child { 
+  border-radius: 0 0 4px 0; 
+  margin-right: 0;
+} 
+.nav > li:last-child > a { 
+  border-radius: 0 4px 0 0;
+}
+.nav li li a { 
+  margin-top: 1px;
+}
+
+
+.nav li a:first-child:nth-last-child(2):before { 
+  content: ""; 
+  position: absolute; 
+  height: 0; 
+  width: 0; 
+  border: 5px solid transparent; 
+  top: 50% ;
+  right:5px;  
+ }
+
+/* submenu positioning*/
+.nav ul {
+  position: absolute;
+  white-space: nowrap;
+  border-bottom: 5px solid  orange;
+  z-index: 1;
+  float: right;
+  left: -99999em;
+}
+.nav > li:hover > ul {
+  left: auto;
+  margin-top: 5px;
+  min-width: 100%;
+}
+.nav > li li:hover > ul { 
+  left: 100%;
+  margin-left: 1px;
+  top: -1px;
+}
+/* arrow hover styling */
+.nav > li > a:first-child:nth-last-child(2):before { 
+  border-top-color: #aaa; 
+}
+.nav > li:hover > a:first-child:nth-last-child(2):before {
+  border: 5px solid transparent; 
+  border-bottom-color: orange; 
+  margin-top:-5px
+}
+.nav li li > a:first-child:nth-last-child(2):before {  
+  border-left-color: #aaa; 
+  margin-top: -5px
+}
+.nav li li:hover > a:first-child:nth-last-child(2):before {
+  border: 5px solid transparent; 
+  border-right-color: orange;
+  right: 10px; 
+}
+
+
+@media screen and (max-width: 600px) {
+    nav ul {
+  margin: 0;
+  list-style: none;
+  position: relative;
+  float: right;
+}
+nav {    
+  display: block;
+  text-align: center;
+  margin-top:69px;
+  float: right!important;
+  background-color: #ae7734;
+
+}
+       
     }
 </style>
 
 <body>
 
-    <div class="container" id="navin">
+    <div class="container-fluid" id="navin">
         <div class="navbar-header">
             <a href="index.html">
-                <img src="assets/images/arrowlogo.jpeg" alt="logo" style="width:90px;height:60px;margin:4px;">
+                <img src="assets/images/arrowlogo.jpeg" alt="logo" style="width:90px;height:60px;margin:5px;">
             </a>
         </div>
     </div>
-    <div class="topnav" id="myTopnav">
-        <a href="contact.php">Contact Us</a>
-        <a href="about.html">About</a>
-        <a class="active" href="products.php">Product</a>
-        <a href="index.html">Home</a>
-        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-            <i class="fa fa-bars"></i>
-        </a>
-    </div>
-
+    <nav>
+        <ul class="nav">
+          <li><a  href="index.html">Home</a></li>
+          <li><a href="#">Product</a>
+            <ul>
+              <li><a href="sofa.php">sofa</a></li>
+              <li><a style="color: rgb(15, 177, 206) !important;" href="cots.php">Wooden Cots</a></li>
+              <li><a href="tables.php">Tabls</a></li>
+            </ul>
+          </li>
+        
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.php">Contact Us</a></li>
+        </ul>
+      </nav>
 
 </body>
 
@@ -2383,16 +2457,7 @@ $db->sql("SET NAMES 'utf8'");
         }
     </style>
 
-    <script>
-        function myFunction() {
-            var x = document.getElementById("myTopnav");
-            if (x.className === "topnav") {
-                x.className += " responsive";
-            } else {
-                x.className = "topnav";
-            }
-        }
-    </script>
+
 </body>
 
 <!-- Mirrored from www.elathemes.com/themes/mobel/products-grid.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 31 Jul 2022 11:34:10 GMT -->
