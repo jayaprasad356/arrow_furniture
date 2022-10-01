@@ -1,12 +1,12 @@
 <?php
-include_once('includes/functions.php');
-$function = new functions;
-include_once('includes/custom-functions.php');
-$fn = new custom_functions;
-include_once('includes/crud.php');
-$db = new Database();
-$db->connect();
-$db->sql("SET NAMES 'utf8'");
+// include_once('includes/functions.php');
+// $function = new functions;
+// include_once('includes/custom-functions.php');
+// $fn = new custom_functions;
+// include_once('includes/crud.php');
+// $db = new Database();
+// $db->connect();
+// $db->sql("SET NAMES 'utf8'");
 ?>
 
 
@@ -239,7 +239,7 @@ nav {
             <ul>
               <li><a href="sofa.php">sofa</a></li>
               <li><a style="color: rgb(15, 177, 206) !important;" href="cots.php">Wooden Cots</a></li>
-              <li><a href="tables.php">Tabels</a></li>
+              <!-- <li><a href="tables.php">Tabels</a></li> -->
             </ul>
           </li>
         
@@ -298,12 +298,12 @@ nav {
                     </a>
 
                     <!-- === icon item === -->
-                    <a href="tables.php">
+                    <!-- <a href="tables.php">
                         <figure>
                             <i class="f-icon f-icon-table"></i>
                             <figcaption>Tables</figcaption>
                         </figure>
-                    </a>
+                    </a> -->
 
                     <!-- === icon item === -->
                     <a href="cots.php">
