@@ -155,6 +155,9 @@ nav ul {
 .nav li li a { 
   margin-top: 1px;
 }
+.nav li li:first-child { 
+  margin-top: 34px;
+}
 
 
 .nav li a:first-child:nth-last-child(2):before { 
@@ -241,7 +244,7 @@ nav {
             <ul>
               <li><a href="sofa.php">sofa</a></li>
               <li><a href="cots.php">Wooden Cots</a></li>
-              <li><a href="tables.php">Tabls</a></li>
+              <li><a href="tables.php">Tables</a></li>
             </ul>
           </li>
         
