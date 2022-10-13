@@ -1,12 +1,12 @@
 <?php
-// include_once('includes/functions.php');
-// $function = new functions;
-// include_once('includes/custom-functions.php');
-// $fn = new custom_functions;
-// include_once('includes/crud.php');
-// $db = new Database();
-// $db->connect();
-// $db->sql("SET NAMES 'utf8'");
+include_once('admin/includes/functions.php');
+$function = new functions;
+include_once('admin/includes/custom-functions.php');
+$fn = new custom_functions;
+include_once('admin/includes/crud.php');
+$db = new Database();
+$db->connect();
+$db->sql("SET NAMES 'utf8'");
 ?>
 
 
@@ -227,14 +227,14 @@ nav {
 
     <div class="container-fluid" id="navin">
         <div class="navbar-header">
-            <a href="index.html">
+            <a href="index.php">
                 <img src="assets/images/arrowlogo.jpeg" alt="logo" style="width:90px;height:60px;margin:5px;">
             </a>
         </div>
     </div>
     <nav>
         <ul class="nav">
-          <li><a  href="index.html">Home</a></li>
+          <li><a  href="index.php">Home</a></li>
           <li><a href="#">Product</a>
             <ul>
               <li><a style="color: rgb(15, 177, 206) !important;" href="sofa.php">sofa</a></li>
@@ -243,7 +243,7 @@ nav {
             </ul>
           </li>
         
-          <li><a href="about.html">About</a></li>
+          <li><a href="about.php">About</a></li>
           <li><a href="contact.php">Contact Us</a></li>
         </ul>
       </nav>
@@ -691,7 +691,13 @@ nav {
 
 
                     <!-- === product-item === -->
-                  
+                <!-- === product-item === -->
+                <?php
+                        $sql = "SELECT * FROM `products` WHERE category_id=1";
+                        $db->sql($sql);
+                        $result = $db->getResult();
+                        foreach ($result as $value) {
+                        ?>
                   <div class="col-md-6 col-xs-6">
                         <article>
                             <div class="info">
@@ -700,7 +706,7 @@ nav {
                                         data-title-added="Added to favorites list"><i class="icon icon-heart"></i></a>
                                 </span>
                                 <span>
-                                    <a href="#productid1" class="mfp-open" data-title="Quick wiew"><i
+                                    <a href="#<?php echo $value['id']; ?>" class="mfp-open" data-title="Quick wiew"><i
                                             class="icon icon-eye"></i></a>
                                 </span>
                             </div>
@@ -710,14 +716,14 @@ nav {
                             <div class="figure-grid">
                                 <span class="label label-warning">New</span>
                                 <div class="image">
-                                    <a href="#productid1" class="mfp-open">
-                                        <img src="assets/images/product-4.jpg" alt="" />
+                                    <a href="#<?php echo $value['id']; ?>" class="mfp-open">
+                                        <img src="<?php echo "admin/" .$value['image']; ?>" height="400" alt="" />
                                     </a>
                                 </div>
                                 <div class="text">
-                                    <h2 class="title h4"><a>Aurora</a></h2>
-                                    <sub>₹ 2999,-</sub>
-                                    <sup>₹ 2299,-</sup>
+                                    <h2 class="title h4"><a><?php echo $value['product_name'] ?></a></h2>
+                                    <sub>₹<?php echo $value['price'] ?></sub>
+                                    <sup>₹ <?php echo $value['discounted_price'] ?></sup>
                                     <span class="description clearfix">Gubergren amet dolor ea diam takimata
                                         consetetur facilisis blandit et aliquyam lorem ea duo labore diam
                                         sit et
@@ -726,294 +732,19 @@ nav {
                             </div>
                         </article>
                      </div>
-                                
-
-
-                    <!-- === product-item === -->
-
-                    <div class="col-md-6 col-xs-6">
-
-                        <article>
-                            <div class="info">
-                                <span class="add-favorite">
-                                    <a href="javascript:void(0);" data-title="Add to favorites"
-                                        data-title-added="Added to favorites list"><i class="icon icon-heart"></i></a>
-                                </span>
-                                <span>
-                                    <a href="#productid2" class="mfp-open" data-title="Quick wiew"><i
-                                            class="icon icon-eye"></i></a>
-                                </span>
-                            </div>
-                            <div class="btn btn-add">
-                                <i class="icon icon-cart"></i>
-                            </div>
-                            <div class="figure-grid">
-                                <span class="label label-info">-50%</span>
-                                <div class="image">
-                                    <a href="#productid2" class="mfp-open">
-                                        <img src="assets/images/product-1.jpg" alt="" width="360" />
-                                    </a>
-                                </div>
-                                <div class="text">
-                                    <h2 class="title h4"><a>Green corner</a></h2>
-                                    <sub>₹ 1499,-</sub>
-                                    <sup>₹ 1099,-</sup>
-                                    <span class="description clearfix">Gubergren amet dolor ea diam takimata
-                                        consetetur facilisis blandit et aliquyam lorem ea duo labore diam
-                                        sit et
-                                        consetetur nulla</span>
-                                </div>
-                            </div>
-                        </article>
-                    </div>
-
-
-                    <!-- === product-item === -->
-
-                    <div class="col-md-6 col-xs-6">
-                        <article>
-                            <div class="info">
-                                <span class="add-favorite">
-                                    <a href="javascript:void(0);" data-title="Add to favorites"
-                                        data-title-added="Added to favorites list"><i class="icon icon-heart"></i></a>
-                                </span>
-                                <span>
-                                    <a href="#productid3" class="mfp-open" data-title="Quick wiew"><i
-                                            class="icon icon-eye"></i></a>
-                                </span>
-                            </div>
-                            <div class="btn btn-add">
-                                <i class="icon icon-cart"></i>
-                            </div>
-                            <div class="figure-grid">
-                                <div class="image">
-                                    <a href="#productid3" class="mfp-open">
-                                        <img src="assets/images/product-2.jpg" alt="" width="360" />
-                                    </a>
-                                </div>
-                                <div class="text">
-                                    <h2 class="title h4"><a>Laura</a></h2>
-                                    <sub>₹ 3999,-</sub>
-                                    <sup>₹ 3499,-</sup>
-                                    <span class="description clearfix">Gubergren amet dolor ea diam takimata
-                                        consetetur facilisis blandit et aliquyam lorem ea duo labore diam sit et
-                                        consetetur nulla</span>
-                                </div>
-                            </div>
-                        </article>
-                    </div>
-
-                    <!-- === product-item === -->
-
-                    <div class="col-md-6 col-xs-6">
-                        <article>
-                            <div class="info">
-                                <span class="add-favorite">
-                                    <a href="javascript:void(0);" data-title="Add to favorites"
-                                        data-title-added="Added to favorites list"><i class="icon icon-heart"></i></a>
-                                </span>
-                                <span>
-                                    <a href="#productid4" class="mfp-open" data-title="Quick wiew"><i
-                                            class="icon icon-eye"></i></a>
-                                </span>
-                            </div>
-                            <div class="btn btn-add">
-                                <i class="icon icon-cart"></i>
-                            </div>
-                            <div class="figure-grid">
-                                <div class="image">
-                                    <a href="#productid4" class="mfp-open">
-                                        <img src="assets/images/product-5.jpg" alt="" width="200px" />
-                                    </a>
-                                </div>
-                                <div class="text">
-                                    <h2 class="title h4"><a>Nude</a></h2>
-                                    <sup style="color:white"><strike>₹ 2999,-</strike></sup>
-                                    <sup style="color:white">₹ 2549,-</sup>
-                                    <span class="description clearfix">Gubergren amet dolor ea diam takimata
-                                        consetetur facilisis blandit et aliquyam lorem ea duo labore diam
-                                        sit et
-                                        consetetur nulla</span>
-                                </div>
-                            </div>
-                        </article>
-                    </div>
-
-
-                    <!-- === product-item === -->
-
-                    <div class="col-md-6 col-xs-6">
-                        <article>
-                            <div class="info">
-                                <span class="add-favorite">
-                                    <a href="javascript:void(0);" data-title="Add to favorites"
-                                        data-title-added="Added to favorites list"><i class="icon icon-heart"></i></a>
-                                </span>
-                                <span>
-                                    <a href="#productid1" class="mfp-open" data-title="Quick wiew"><i
-                                            class="icon icon-eye"></i></a>
-                                </span>
-                            </div>
-                            <div class="btn btn-add">
-                                <i class="icon icon-cart"></i>
-                            </div>
-                            <div class="figure-grid">
-                                <span class="label label-warning">New</span>
-                                <div class="image">
-                                    <a href="#productid1" class="mfp-open">
-                                        <img src="assets/images/product-4.jpg" alt="" width="360" />
-                                    </a>
-                                </div>
-                                <div class="text">
-                                    <h2 class="title h4"><a>Aurora</a></h2>
-                                    <sub>₹ 2999,-</sub>
-                                    <sup>₹ 2299,-</sup>
-                                    <span class="description clearfix">Gubergren amet dolor ea diam takimata
-                                        consetetur facilisis blandit et aliquyam lorem ea duo labore diam
-                                        sit et
-                                        consetetur nulla</span>
-                                </div>
-                            </div>
-                        </article>
-                    </div>
-
-                    <!-- === product-item === -->
-
-                    <div class="col-md-6 col-xs-6">
-                        <article>
-                            <div class="info">
-                                <span class="add-favorite">
-                                    <a href="javascript:void(0);" data-title="Add to favorites"
-                                        data-title-added="Added to favorites list"><i class="icon icon-heart"></i></a>
-                                </span>
-                                <span>
-                                    <a href="#productid5" class="mfp-open" data-title="Quick wiew"><i
-                                            class="icon icon-eye"></i></a>
-                                </span>
-                            </div>
-                            <div class="btn btn-add">
-                                <i class="icon icon-cart"></i>
-                            </div>
-                            <div class="figure-grid">
-                                <span class="label label-warning">New</span>
-                                <div class="image">
-                                    <a href="#productid5" class="mfp-open">
-                                        <img src="assets/images/product-6.jpg" alt="" width="360" />
-                                    </a>
-                                </div>
-                                <div class="text">
-                                    <h2 class="title h4"><a>Dining set</a></h2>
-                                    <sub>₹ 1999,-</sub>
-                                    <sup>₹ 1499,-</sup>
-                                    <span class="description clearfix">Gubergren amet dolor ea diam takimata
-                                        consetetur facilisis blandit et aliquyam lorem ea duo labore diam
-                                        sit et
-                                        consetetur nulla</span>
-                                </div>
-                            </div>
-                        </article>
-                    </div>
-
-                    <!-- === product-item === -->
-
-                    <div class="col-md-6 col-xs-6">
-                        <article>
-                            <div class="info">
-                                <span class="add-favorite">
-                                    <a href="javascript:void(0);" data-title="Add to favorites"
-                                        data-title-added="Added to favorites list"><i class="icon icon-heart"></i></a>
-                                </span>
-                                <span>
-                                    <a href="#productid6" class="mfp-open" data-title="Quick wiew"><i
-                                            class="icon icon-eye"></i></a>
-                                </span>
-                            </div>
-                            <div class="btn btn-add">
-                                <i class="icon icon-cart"></i>
-                            </div>
-                            <div class="figure-grid">
-                                <div class="image">
-                                    <a href="#productid6" class="mfp-open">
-                                        <img src="assets/images/product-3.jpg" alt="" width="360" />
-                                    </a>
-                                </div>
-                                <div class="text">
-                                    <h2 class="title h4"><a>Seat chair</a></h2>
-                                    <sup>₹ 896,-</sup>
-                                    <span class="description clearfix">Gubergren amet dolor ea diam takimata
-                                        consetetur facilisis blandit et aliquyam lorem ea duo labore diam
-                                        sit et
-                                        consetetur nulla</span>
-                                </div>
-                            </div>
-                        </article>
-                    </div>
-
-                    <!-- === product-item === -->
-
-                    <div class="col-md-6 col-xs-6">
-
-                        <article>
-                            <div class="info">
-                                <span class="add-favorite">
-                                    <a href="javascript:void(0);" data-title="Add to favorites"
-                                        data-title-added="Added to favorites list"><i class="icon icon-heart"></i></a>
-                                </span>
-                                <span>
-                                    <a href="#productid7" class="mfp-open" data-title="Quick wiew"><i
-                                            class="icon icon-eye"></i></a>
-                                </span>
-                            </div>
-                            <div class="btn btn-add">
-                                <i class="icon icon-cart"></i>
-                            </div>
-                            <div class="figure-grid">
-                                <span class="label label-info">-50%</span>
-                                <div class="image">
-                                    <a href="#productid7" class="mfp-open">
-                                        <img src="assets/images/product-7.jpg" alt="" width="360" />
-                                    </a>
-                                </div>
-                                <div class="text">
-                                    <h2 class="title h4"><a>Sofa</a></h2>
-                                    <sub>₹ 1499,-</sub>
-                                    <sup>₹ 1099,-</sup>
-                                    <span class="description clearfix">Gubergren amet dolor ea diam takimata
-                                        consetetur facilisis blandit et aliquyam lorem ea duo labore diam
-                                        sit et
-                                        consetetur nulla</span>
-                                </div>
-                            </div>
-                        </article>
-                    </div>
-
-                </div>
-                <!--/row-->
-
-                <!--Pagination-->
-                <!-- <div class="pagination-wrapper">
-                    <ul class="pagination">
-                        <li>
-                            <a href="#" aria-label="Previous">
-                                <span aria-hidden="true">&laquo;</span>
-                            </a>
-                        </li>
-                        <li class="active"><a href="#">1</a></li>
-                        <li><a href="#">2</a></li>
-                        <li><a href="#">3</a></li>
-                        <li><a href="#">4</a></li>
-                        <li><a href="#">5</a></li>
-                        <li>
-                            <a href="#" aria-label="Next">
-                                <span aria-hidden="true">&raquo;</span>
-                            </a>
-                        </li>
-                    </ul>
-                </div> -->
+                                   
+                        <?php } ?>
 
         </section>
         <!-- ========================  Product info popup - quick view ======================== -->
-        <div class="popup-main mfp-hide" id="productid1">
+    
+<?php
+    $sql = "SELECT * FROM `products`";
+    $db->sql($sql);
+    $result = $db->getResult();
+    foreach ($result as $value) {
+    ?>
+  <div class="popup-main mfp-hide" id=<?php echo $value['id']; ?> >
 
             <!-- === product popup === -->
 
@@ -1022,16 +753,15 @@ nav {
                 <!-- === popup-title === -->
 
                 <div class="popup-title">
-                    <div class="h1 title">Aurora<small>product category</small></div>
+                    <div class="h1 title"><?php echo $value['product_name'] ?><small>product category</small></div>
                 </div>
 
                 <!-- === product gallery === -->
 
                 <div class="owl-product-gallery">
-                    <img src="assets/images/product-4.jpg" alt="" width="640" />
+                    <img src="<?php echo "admin/" .$value['image'] ?>" alt="" width="640" />
 
                 </div>
-
                 <div class="product-info-wrapper">
                     <div class="row">
 
@@ -1085,7 +815,7 @@ nav {
             <div class="popup-table table-bordered">
                 <div class="popup-cell">
                     <div class="price">
-                        <span class="h3">₹ 2299.00 <small><strike>₹ 2999.00</strike></small></span>
+                        <span class="h3"><?php echo $value['discounted_price']; ?><small><strike><?php echo $value['price']; ?></strike></small></span>
                     </div>
                 </div>
                 <div class="popup-cell">
@@ -1099,542 +829,7 @@ nav {
 
         </div>
     </div>
-
-    <!-- ========================  Product info popup - quick view(product2) ======================== -->
-    <div class="popup-main mfp-hide" id="productid2">
-
-        <!-- === product popup === -->
-
-        <div class="product">
-
-            <!-- === popup-title === -->
-
-            <div class="popup-title">
-                <div class="h1 title">Green Corner<small>product category</small></div>
-            </div>
-
-            <!-- === product gallery === -->
-
-            <div class="owl-product-gallery">
-                <img src="assets/images/product-1.jpg" alt="" width="640" />
-
-            </div>
-
-            <div class="product-info-wrapper">
-                <div class="row">
-
-
-                    <div class="col-sm-6">
-                        <div class="info-box">
-                            <strong>Manufacturer</strong>
-                            <span>Brand name</span>
-                        </div>
-                        <div class="info-box">
-                            <strong>Materials</strong>
-                            <span>Wood, Leather, Acrylic</span>
-                        </div>
-                        <div class="info-box">
-                            <strong>Availability</strong>
-                            <span><i class="fa fa-check-square-o"></i> in stock</span>
-                        </div>
-                    </div>
-
-
-
-                    <div class="col-sm-6">
-                        <div class="info-box">
-                            <strong>Available Colors</strong>
-                            <div class="product-colors clearfix">
-                                <span class="color-btn color-btn-red"></span>
-                                <span class="color-btn color-btn-blue checked"></span>
-                                <span class="color-btn color-btn-green"></span>
-                                <span class="color-btn color-btn-gray"></span>
-                                <span class="color-btn color-btn-biege"></span>
-                            </div>
-                        </div>
-                        <div class="info-box">
-                            <strong>Choose size</strong>
-                            <div class="product-colors clearfix">
-                                <span class="color-btn color-btn-biege">S</span>
-                                <span class="color-btn color-btn-biege checked">M</span>
-                                <span class="color-btn color-btn-biege">XL</span>
-                                <span class="color-btn color-btn-biege">XXL</span>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-
-
-        <div class="popup-table table-bordered">
-            <div class="popup-cell">
-                <div class="price">
-                    <span class="h3">₹ 1099,00 <small><strike>₹ 1499,00</strike></small></span>
-                </div>
-            </div>
-            <div class="popup-cell">
-                <div class="popup-buttons">
-                    <a><span class="icon icon-eye"></span> <span class="hidden-xs">View
-                            more</span></a>
-                    <a><span class=" icon icon-cart"></span> <span class="hidden-xs">Buy</span></a>
-                </div>
-            </div>
-        </div>
-
-    </div>
-    </div>
-
-    <!-- ========================  Product info popup - quick view(product3) ======================== -->
-    <div class="popup-main mfp-hide" id="productid3">
-
-        <!-- === product popup === -->
-
-        <div class="product">
-
-            <!-- === popup-title === -->
-
-            <div class="popup-title">
-                <div class="h1 title">Laura<small>product category</small></div>
-            </div>
-
-            <!-- === product gallery === -->
-
-            <div class="owl-product-gallery">
-                <img src="assets/images/product-2.jpg" alt="" width="640" />
-
-            </div>
-
-            <div class="product-info-wrapper">
-                <div class="row">
-
-
-                    <div class="col-sm-6">
-                        <div class="info-box">
-                            <strong>Manufacturer</strong>
-                            <span>Brand name</span>
-                        </div>
-                        <div class="info-box">
-                            <strong>Materials</strong>
-                            <span>Wood, Leather, Acrylic</span>
-                        </div>
-                        <div class="info-box">
-                            <strong>Availability</strong>
-                            <span><i class="fa fa-check-square-o"></i> in stock</span>
-                        </div>
-                    </div>
-
-
-
-                    <div class="col-sm-6">
-                        <div class="info-box">
-                            <strong>Available Colors</strong>
-                            <div class="product-colors clearfix">
-                                <span class="color-btn color-btn-red"></span>
-                                <span class="color-btn color-btn-blue"></span>
-                                <span class="color-btn color-btn-green"></span>
-                                <span class="color-btn color-btn-gray checked"></span>
-                                <span class="color-btn color-btn-biege"></span>
-                            </div>
-                        </div>
-                        <div class="info-box">
-                            <strong>Choose size</strong>
-                            <div class="product-colors clearfix">
-                                <span class="color-btn color-btn-biege">S</span>
-                                <span class="color-btn color-btn-biege">M</span>
-                                <span class="color-btn color-btn-biege checked">XL</span>
-                                <span class="color-btn color-btn-biege">XXL</span>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-
-
-        <div class="popup-table table-bordered">
-            <div class="popup-cell">
-                <div class="price">
-                    <span class="h3">₹ 3499,00 <small><strike>₹ 3999,00</strike></small></span>
-                </div>
-            </div>
-            <div class="popup-cell">
-                <div class="popup-buttons">
-                    <a><span class="icon icon-eye"></span> <span class="hidden-xs">View
-                            more</span></a>
-                    <a><span class=" icon icon-cart"></span> <span class="hidden-xs">Buy</span></a>
-                </div>
-            </div>
-        </div>
-
-    </div>
-    </div>
-
-    <!-- ========================  Product info popup - quick view(product4) ======================== -->
-    <div class="popup-main mfp-hide" id="productid4">
-
-        <!-- === product popup === -->
-
-        <div class="product">
-
-            <!-- === popup-title === -->
-
-            <div class="popup-title">
-                <div class="h1 title">Nude<small>product category</small></div>
-            </div>
-
-            <!-- === product gallery === -->
-
-            <div class="owl-product-gallery">
-                <img src="assets/images/product-5.jpg" alt="" width="640" />
-
-            </div>
-
-            <div class="product-info-wrapper">
-                <div class="row">
-
-
-                    <div class="col-sm-6">
-                        <div class="info-box">
-                            <strong>Manufacturer</strong>
-                            <span>Brand name</span>
-                        </div>
-                        <div class="info-box">
-                            <strong>Materials</strong>
-                            <span>Wood, Leather, Acrylic</span>
-                        </div>
-                        <div class="info-box">
-                            <strong>Availability</strong>
-                            <span><i class="fa fa-check-square-o"></i> in stock</span>
-                        </div>
-                    </div>
-
-
-
-                    <div class="col-sm-6">
-                        <div class="info-box">
-                            <strong>Available Colors</strong>
-                            <div class="product-colors clearfix">
-                                <span class="color-btn color-btn-red"></span>
-                                <span class="color-btn color-btn-blue checked"></span>
-                                <span class="color-btn color-btn-green"></span>
-                                <span class="color-btn color-btn-gray"></span>
-                                <span class="color-btn color-btn-biege"></span>
-                            </div>
-                        </div>
-                        <div class="info-box">
-                            <strong>Choose size</strong>
-                            <div class="product-colors clearfix">
-                                <span class="color-btn color-btn-biege">S</span>
-                                <span class="color-btn color-btn-biege checked">M</span>
-                                <span class="color-btn color-btn-biege">XL</span>
-                                <span class="color-btn color-btn-biege">XXL</span>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-
-
-        <div class="popup-table table-bordered">
-            <div class="popup-cell">
-                <div class="price">
-                    <span class="h3">₹ 2599,00 <small><strike>₹ 2999,00</strike></small></span>
-                </div>
-            </div>
-            <div class="popup-cell">
-                <div class="popup-buttons">
-                    <a><span class="icon icon-eye"></span> <span class="hidden-xs">View
-                            more</span></a>
-                    <a><span class=" icon icon-cart"></span> <span class="hidden-xs">Buy</span></a>
-                </div>
-            </div>
-        </div>
-
-    </div>
-    </div>
-
-    <!-- ========================  Product info popup - quick view(product6) ======================== -->
-    <div class="popup-main mfp-hide" id="productid5">
-
-        <!-- === product popup === -->
-
-        <div class="product">
-
-            <!-- === popup-title === -->
-
-            <div class="popup-title">
-                <div class="h1 title">Dining Set<small>product category</small></div>
-            </div>
-
-            <!-- === product gallery === -->
-
-            <div class="owl-product-gallery">
-                <img src="assets/images/product-6.jpg" alt="" width="640" />
-
-            </div>
-
-            <div class="product-info-wrapper">
-                <div class="row">
-
-
-                    <div class="col-sm-6">
-                        <div class="info-box">
-                            <strong>Manufacturer</strong>
-                            <span>Brand name</span>
-                        </div>
-                        <div class="info-box">
-                            <strong>Materials</strong>
-                            <span>Wood, Leather, Acrylic</span>
-                        </div>
-                        <div class="info-box">
-                            <strong>Availability</strong>
-                            <span><i class="fa fa-check-square-o"></i> in stock</span>
-                        </div>
-                    </div>
-
-
-
-                    <div class="col-sm-6">
-                        <div class="info-box">
-                            <strong>Available Colors</strong>
-                            <div class="product-colors clearfix">
-                                <span class="color-btn color-btn-red"></span>
-                                <span class="color-btn color-btn-black checked"></span>
-                                <span class="color-btn color-btn-green"></span>
-                                <span class="color-btn color-btn-gray"></span>
-                                <span class="color-btn color-btn-biege"></span>
-                            </div>
-                        </div>
-                        <div class="info-box">
-                            <strong>Choose size</strong>
-                            <div class="product-colors clearfix">
-                                <span class="color-btn color-btn-biege">S</span>
-                                <span class="color-btn color-btn-biege checked">M</span>
-                                <span class="color-btn color-btn-biege">XL</span>
-                                <span class="color-btn color-btn-biege">XXL</span>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-
-
-        <div class="popup-table table-bordered">
-            <div class="popup-cell">
-                <div class="price">
-                    <span class="h3">₹ 1499,00 <small><strike>₹ 1999,00</strike></small></span>
-                </div>
-            </div>
-            <div class="popup-cell">
-                <div class="popup-buttons">
-                    <a><span class="icon icon-eye"></span> <span class="hidden-xs">View
-                            more</span></a>
-                    <a><span class=" icon icon-cart"></span> <span class="hidden-xs">Buy</span></a>
-                </div>
-            </div>
-        </div>
-
-    </div>
-    </div>
-
-    <!-- ========================  Product info popup - quick view(product7) ======================== -->
-    <div class="popup-main mfp-hide" id="productid6">
-
-        <!-- === product popup === -->
-
-        <div class="product">
-
-            <!-- === popup-title === -->
-
-            <div class="popup-title">
-                <div class="h1 title">Seat Chair<small>product category</small></div>
-            </div>
-
-            <!-- === product gallery === -->
-
-            <div class="owl-product-gallery">
-                <img src="assets/images/product-3.jpg" alt="" width="640" />
-
-            </div>
-
-            <div class="product-info-wrapper">
-                <div class="row">
-
-
-                    <div class="col-sm-6">
-                        <div class="info-box">
-                            <strong>Manufacturer</strong>
-                            <span>Brand name</span>
-                        </div>
-                        <div class="info-box">
-                            <strong>Materials</strong>
-                            <span>Wood, Leather, Acrylic</span>
-                        </div>
-                        <div class="info-box">
-                            <strong>Availability</strong>
-                            <span><i class="fa fa-check-square-o"></i> Limited</span>
-                        </div>
-                    </div>
-
-
-
-                    <div class="col-sm-6">
-                        <div class="info-box">
-                            <strong>Available Colors</strong>
-                            <div class="product-colors clearfix">
-                                <span class="color-btn color-btn-red"></span>
-                                <span class="color-btn color-btn-blue"></span>
-                                <span class="color-btn color-btn-green checked"></span>
-                                <span class="color-btn color-btn-gray"></span>
-                                <span class="color-btn color-btn-biege"></span>
-                            </div>
-                        </div>
-                        <div class="info-box">
-                            <strong>Choose size</strong>
-                            <div class="product-colors clearfix">
-                                <span class="color-btn color-btn-biege">S</span>
-                                <span class="color-btn color-btn-biege checked">M</span>
-                                <span class="color-btn color-btn-biege">XL</span>
-                                <span class="color-btn color-btn-biege">XXL</span>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-
-
-        <div class="popup-table table-bordered">
-            <div class="popup-cell">
-                <div class="price">
-                    <span class="h3">₹ 999,00 <small><strike>₹ 799,00</strike></small></span>
-                </div>
-            </div>
-            <div class="popup-cell">
-                <div class="popup-buttons">
-                    <a><span class="icon icon-eye"></span> <span class="hidden-xs">View
-                            more</span></a>
-                    <a><span class=" icon icon-cart"></span> <span class="hidden-xs">Buy</span></a>
-                </div>
-            </div>
-        </div>
-
-    </div>
-    </div>
-
-    <!-- ========================  Product info popup - quick view(product8) ======================== -->
-    <div class="popup-main mfp-hide" id="productid7">
-
-        <!-- === product popup === -->
-
-        <div class="product">
-
-            <!-- === popup-title === -->
-
-            <div class="popup-title">
-                <div class="h1 title">Sofa<small>product category</small></div>
-            </div>
-
-            <!-- === product gallery === -->
-
-            <div class="owl-product-gallery">
-                <img src="assets/images/product-7.jpg" alt="" width="640" />
-
-            </div>
-
-            <div class="product-info-wrapper">
-                <div class="row">
-
-
-                    <div class="col-sm-6">
-                        <div class="info-box">
-                            <strong>Manufacturer</strong>
-                            <span>Brand name</span>
-                        </div>
-                        <div class="info-box">
-                            <strong>Materials</strong>
-                            <span>Wood, Leather, Acrylic</span>
-                        </div>
-                        <div class="info-box">
-                            <strong>Availability</strong>
-                            <span><i class="fa fa-check-square-o"></i> in stock</span>
-                        </div>
-                    </div>
-
-
-
-                    <div class="col-sm-6">
-                        <div class="info-box">
-                            <strong>Available Colors</strong>
-                            <div class="product-colors clearfix">
-                                <span class="color-btn color-btn-red"></span>
-                                <span class="color-btn color-btn-blue "></span>
-                                <span class="color-btn color-btn-green"></span>
-                                <span class="color-btn color-btn-gray checked"></span>
-                                <span class="color-btn color-btn-biege"></span>
-                            </div>
-                        </div>
-                        <div class="info-box">
-                            <strong>Choose size</strong>
-                            <div class="product-colors clearfix">
-                                <span class="color-btn color-btn-biege">S</span>
-                                <span class="color-btn color-btn-biege checked">M</span>
-                                <span class="color-btn color-btn-biege">XL</span>
-                                <span class="color-btn color-btn-biege">XXL</span>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-
-
-        <div class="popup-table table-bordered">
-            <div class="popup-cell">
-                <div class="price">
-                    <span class="h3">₹ 1099,00 <small><strike>₹ 1499,00</strike></small></span>
-                </div>
-            </div>
-            <div class="popup-cell">
-                <div class="popup-buttons">
-                    <a><span class="icon icon-eye"></span> <span class="hidden-xs">View
-                            more</span></a>
-                    <a><span class=" icon icon-cart"></span> <span class="hidden-xs">Buy</span></a>
-                </div>
-            </div>
-        </div>
-
-    </div>
-    </div>
-
-    
-   
-
-
-
-    </div>
-
+       <?php } ?>
     <!--/container-->
 
     <div class="inc:_footer.html"></div>

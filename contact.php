@@ -235,14 +235,14 @@ nav {
 
     <div class="container-fluid" id="navin">
         <div class="navbar-header">
-            <a href="index.html">
+            <a href="index.php">
                 <img src="assets/images/arrowlogo.jpeg" alt="logo" style="width:90px;height:60px;margin:5px;">
             </a>
         </div>
     </div>
     <nav>
         <ul class="nav">
-          <li><a  href="index.html">Home</a></li>
+          <li><a  href="index.php">Home</a></li>
           <li><a href="#">Product</a>
             <ul>
               <li><a href="sofa.php">sofa</a></li>
@@ -251,7 +251,7 @@ nav {
             </ul>
           </li>
         
-          <li><a href="about.html">About</a></li>
+          <li><a href="about.php">About</a></li>
           <li><a style="color: rgb(15, 177, 206) !important;" href="contact.php">Contact Us</a></li>
         </ul>
       </nav>

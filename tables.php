@@ -704,7 +704,7 @@ nav {
                                         data-title-added="Added to favorites list"><i class="icon icon-heart"></i></a>
                                 </span>
                                 <span>
-                                    <a href="#productid1" class="mfp-open" data-title="Quick wiew"><i
+                                    <a href="#<?php echo $value[0]['id']; ?>" class="mfp-open" data-title="Quick wiew"><i
                                             class="icon icon-eye"></i></a>
                                 </span>
                             </div>
@@ -745,7 +745,7 @@ nav {
     $result = $db->getResult();
     foreach ($result as $value) {
     ?>
-  <div class="popup-main mfp-hide" id=productid1 >
+  <div class="popup-main mfp-hide" id=<?= $res[0]['id']; ?> >
 
             <!-- === product popup === -->
 
@@ -816,7 +816,7 @@ nav {
             <div class="popup-table table-bordered">
                 <div class="popup-cell">
                     <div class="price">
-                        <span class="h3">₹ 650.00 <small><strike>₹ 800.00</strike></small></span>
+                        <span class="h3"><?php echo $res[0]['discounted_price']; ?><small><strike><?php echo $res[0]['price']; ?></strike></small></span>
                     </div>
                 </div>
                 <div class="popup-cell">
