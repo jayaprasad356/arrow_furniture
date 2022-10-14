@@ -81,6 +81,10 @@ if(isset($_POST['btnsubmit'])){
   margin-top: 10px;
 
 }
+#navin span{
+    color:#cca763;
+    font-family: 'Times New Roman', Times, serif;
+}
 nav ul {
   top: 0!important;
   padding: 0;
@@ -229,6 +233,20 @@ nav {
 }
        
     }
+@media screen and (max-width:900px){
+        #navin span{
+        top:0;
+        margin-top:10px;
+        right:0;
+        color:#cca763;
+        width:300px!important;
+        position: absolute;
+        text-align:center;
+        word-break: normal;
+        font-size:12px;
+
+        }
+}
 </style>
 
 <body>
@@ -239,6 +257,10 @@ nav {
                 <img src="assets/images/arrowlogo.jpeg" alt="logo" style="width:90px;height:60px;margin:5px;">
             </a>
         </div>
+        <span><p>Jeyalakshmi Industries,<br>
+        GST-33ADJPA2597G1ZP , Mobile : 9715922122 <br>
+    Mail-id : arrowfurnitures@gmail.com</p> 
+        </span> 
     </div>
     <nav>
         <ul class="nav">
@@ -484,24 +506,25 @@ nav {
         </section>
 
         <div class="inc:_footer.html"></div>
-        <nav class="navbar-default">
-            <div class="container">
-                <div class="navbar-header">
-                    <a class="navbar-brand"></a>
-                </div>
-                <p style="float:right;color:white;margin-top:2px;padding: 10px;">All copy right reserved @2022</p>
-                </ul>
+</div>
+<div class="navbar-default" style="background-color: #00183c;">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand"></a>
             </div>
-        </nav>
-        <!--footer style-->
-        <style>
-            @media screen and (max-width: 600px) {
-                .navbar-default .navbar-brand {
-                    display: none;
-                }
-            }
-        </style>
+            <p style="text-align:center;color:white;margin-top:2px;padding: 10px;">All copy right reserved @2022</p>
+            </ul>
+        </div>
     </div>
+    <!--footer style-->
+    <style>
+        @media screen and (max-width: 600px) {
+            .navbar-default .navbar-brand {
+                display: none;
+            
+            }
+        }
+    </style>
     <!--/wrapper-->
 
 
